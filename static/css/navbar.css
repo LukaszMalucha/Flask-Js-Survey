@@ -163,25 +163,13 @@ nav ul b {
 }
 
 
-nav ul a:hover {
-    background-color: #fff;
-    color: #2f2f2f;
-}
-
-nav ul li:hover, nav ul li:active {
-    background: #2f2f2f;
-}
-
-.sidenav li:hover {
-     background: #2f2f2f;
-}
 
 /*------------------------------------------------------------------------------
     Colors
 ------------------------------------------------------------------------------*/
 
 .top-navbar {
-    background: #191919;
+    background: #1a2026;
     box-shadow: none;
     border: none;
 }
@@ -233,6 +221,20 @@ nav ul a {
  .navbar-default .navbar-brand:hover {
     color: #e5ebef;
  }
+
+ nav ul a:hover {
+    background-color: #fff;
+    color: #2f2f2f;
+}
+
+nav ul li:hover, nav ul li:active {
+    background: #222a32;
+}
+
+.sidenav li:hover {
+     background: #2f2f2f;
+}
+
 
 .sidenav {
     background: #191919;

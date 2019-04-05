@@ -81,42 +81,18 @@ h2 {
 }
 
 
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.row-form {
+    margin-top: 5%;
+    width: 60%;
+}
 
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS    
 ------------------------------------------------------------------------------*/
-
-#title_card {
-    background-color: #2a333c;
-    border-style: outset;
-    border-color: #222931;
-    border-radius: 15px;
-    vertical-align: middle;
-    border-width: 3px;
-    padding: 30px;
-
-}
-
-#title_card p {
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    padding: 17px;
-    margin-bottom: 0px;
-}
-
-#title_card h3,
-h2 {
-    color: #FFCB9A;
-    font-size: 20px;
-    margin: 5px;
-}
-
-#title_card h5 {
-    color: white;
-    font-size: 14px;
-    margin: 5px;
-}
 
 
 
@@ -165,27 +141,7 @@ h2 {
     margin: 5px;
 }
 
-.question {
-    background-color: #2a333c;
-    border-style: outset;
-    border-color: #2a333c;
-    border-radius: 5px;
-    padding: 10px;
-    width:90%;
-    margin: auto;
-    min-height: 240px;
-    vertical-align: middle;
-    border-width: 1px;
-    
-}
 
-.question p {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 20px;
-    margin-left: 10px;
-}
 
 #table_card {
     background-color: #2a333c;
@@ -208,20 +164,82 @@ h2 {
 }
 
 
-#answer {
-    background-color: #2a333c;
-    border-style: outset;
-    border-color: #2a333c;
-    border-radius: 5px;
-    padding: 10px;
-    vertical-align: middle;
-    border-width: 1px;
-    min-height: 80px;
-    
+
+/*------------------------------------------------------------------------------
+    ML SURVEY
+------------------------------------------------------------------------------*/
+
+#surveyElement {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+#surveyElement h3 {
+    color: #FFCB9A;
+    font-weight: 500;
+
+}
+
+.sv_header {
+    background: #1a2026;
+
+}
+
+.sv_main.sv_default_css .sv_body {
+    background-color: #1a2026 !important;
+    border-color: transparent !important;
+
+}
+
+.sv_row {
+    background-color: #1a2026 !important;
+    border-color: transparent !important;
+}
+
+
+.sv_q_title {
+    color: #FFCB9A;
+    font-size: 1.2em !important;
+}
+
+#surveyElement label {
+    color: white;
+    font-size: 1.1em !important;
+}
+
+
+[type="radio"] + span::before, [type="radio"] + span::after {
+    margin: 12px;
+}
+
+[type="radio"]:not(:checked) + span::before, [type="radio"]:not(:checked) + span::after {
+    border: 2px solid grey;
+}
+
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+    background-color: #bdbdbd;
+    border: 2px solid #bdbdbd;
+}
+
+.sv_main.sv_default_css input[type="button"] {
+    color: white;
+    background-color: #195d19 !important;
+    line-height: 2em;
+    font-size: 1em;
+}
+.sv_main.sv_default_css .sv_progress {
+    background-color:  #5a5a5a !important;
+}
+
+.sv_main.sv_default_css .sv_progress_bar {
+    background-color: #bdbdbd !important;
 }
 
 /*------------------------------------------------------------------------------
-    EDIT & ADD FORMS + TABLE    
+    EDIT & ADD FORMS + TABLE
 ------------------------------------------------------------------------------*/
 
 
@@ -459,6 +477,31 @@ input[type="text"].valid {
     background-color: white;
     color: #2b4056;
 }
+
+
+
+
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #12161a;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 15px;
+    color: #fff;
+    padding: 15px 0px;
+    text-align: center;
+}
+
 
 /*------------------------------------------------------------------------------
     MEDIA QUERIES     

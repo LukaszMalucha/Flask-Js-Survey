@@ -25,7 +25,15 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
-    {% block extrahead %}{% endblock %} {% block head_js %} {% endblock head_js %}
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
+
+    {% block extrahead %}{% endblock %}
 
 </head>
 
@@ -94,13 +102,10 @@
     <p> Powered by CreoLabs &trade;</p>
 </div>
 
-<!-- jQuery-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-<script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
-<link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
+
 
 <!-- Bootstrap Js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -109,22 +114,16 @@
 
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-        var questions = [{% for item in questions %}
-            "{{item }}" ,
-            {% endfor %}];
 
-        var answers =  {{ answers|tojson }};
-
-
-    </script>
 <!-- Custom Js -->
 <script src="{{url_for('static', filename='js/custom-scripts.js')}}"></script>
-<script src="{{url_for('static', filename='js/forms.js')}}"></script>
+
 
 <!-- Data Tables -->
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+{% block head_js %}
 
+{% endblock head_js %}
 </body>
 
 </html>

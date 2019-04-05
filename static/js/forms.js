@@ -1,11 +1,14 @@
+
+
 Survey
     .StylesManager
     .applyTheme("default");
-var questions_data = questions;
-var answers_data = answers;
+    var questions_data = questions;
+    var answers_data = answers;
 
 var json = {
-    title: "Software developer survey.",
+    title: "Characterize your Data task to find out what's the most suitable algorithm.",
+    showProgressBar: "bottom",
     pages: [
         {
 
@@ -89,10 +92,10 @@ survey
 
             .done(function(data) {
                  $('#successAlert').text(data.alert).show();
-                console.log(data);
+
 
             });
-            console.log(result.data);
+
     });
 
 
