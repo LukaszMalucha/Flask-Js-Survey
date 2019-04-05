@@ -224,14 +224,6 @@ h2 {
     EDIT & ADD FORMS + TABLE    
 ------------------------------------------------------------------------------*/
 
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
-    opacity: 1;
-    position: static;
-    margin-left: 10px;
-    color: white;
-    pointer-events: visibleFill;
-}
 
 
 input[type=text],

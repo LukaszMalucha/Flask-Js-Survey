@@ -42,9 +42,7 @@
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <li><a class="nav-link" target="_blank" href="{{url_for('dashboard.add_algorithm')}}"><i class="fas fa-code-branch"></i> <b> Algorithms</b></a></li>
-            <li><a class="nav-link" target="_blank" href="{{url_for('dashboard.map')}}"><i class="fab fa-python"></i> <b>SciKit&trade; Map</b></a></li>
-            <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/ML-Selector/"><i
-                    class="fab fa-github"></i> <b> GitHub</b></a></li>
+            <li><a class="nav-link" target="_blank" href="{{url_for('dashboard.map')}}"><i class="fab fa-python"></i> <b>SciKit Map</b></a></li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
                     class="fas fa-caret-down"></i><b>{{ current_user.email }} </b></a></li>
             <li><a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="trigger">menu</i></a>
@@ -99,6 +97,11 @@
 <!-- jQuery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+<script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
+<link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
 <!-- Bootstrap Js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -106,7 +109,15 @@
 
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+        var questions = [{% for item in questions %}
+            "{{item }}" ,
+            {% endfor %}];
 
+        var answers =  {{ answers|tojson }};
+
+
+    </script>
 <!-- Custom Js -->
 <script src="{{url_for('static', filename='js/custom-scripts.js')}}"></script>
 <script src="{{url_for('static', filename='js/forms.js')}}"></script>
