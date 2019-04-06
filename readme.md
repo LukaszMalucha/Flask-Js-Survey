@@ -41,7 +41,7 @@ Project is also an example of building connection between <b>MongoDB</b> databas
 
 ### Travis CI
 
-[![Build Status](https://travis-ci.org/LukaszMalucha/PP-Milestone-Project.svg?branch=master)](https://travis-ci.org/LukaszMalucha/PP-Milestone-Project)
+[![Build Status](https://travis-ci.com/LukaszMalucha/ML-Selector.svg?branch=master)](https://travis-ci.com/LukaszMalucha/ML-Selector)
 
 ### Test Files
 
