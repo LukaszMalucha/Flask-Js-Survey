@@ -12,12 +12,12 @@
         <div class="card-action" id="results">
 
         </div>
-        <button type="submit" class="btn-card" onclick="window.location='{{url_for('dashboard.dashboard')}}'"><span>Main Page <i class="far fa-arrow-alt-circle-right"></i></span>
+        <button type="submit" class="btn-card" onclick="window.location='{{url_for('dashboard.dashboard')}}'"><span>Main Page <i
+                class="far fa-arrow-alt-circle-right"></i></span>
         </button>
     </div>
 
 </div>
-
 
 
 <script type="text/javascript">
@@ -26,6 +26,7 @@
         {% endfor %}];
 
     var answers =  {{ answers|tojson }};
+
 
 </script>
 <script src="{{url_for('static', filename='js/forms.js')}}"></script>

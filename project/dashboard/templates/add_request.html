@@ -7,11 +7,12 @@
     $(document).ready(function() {
         $('#DataTable').dataTable();
     });
+
 </script>
 {% endblock %}
 
 <div class="row row-cards">
-    <div class="col-md-3">
+    <div class="col-sm-12 col-md-4 col-lg-3">
         <form action="{{url_for('dashboard.insert_algorithm') }}" id="suggest-form" method="POST" class="col s12">
             <div class="card form-card">
                 <div class="card-content">
@@ -39,8 +40,8 @@
             </div>
         </form>
     </div>
-    <div class="col-md-9">
-        <div class="card form-card">
+    <div class="col-sm-12 col-md-8 col-lg-9">
+        <div class="card form-card table-card">
             <div class="card-content">
                 <span class="card-title">Algortihms Repository</span>
                 <br>
@@ -59,7 +60,8 @@
                             <td class="center" id="suggested_algorithm">{{algorithm.algorithm}}</td>
                             <td class="center">{{algorithm.description}}</td>
                             <td class="center">
-                                <button  class="btn btn-small deleteButton" algorithm_id="{{ algorithm._id }}">Delete</button>
+                                <button class="btn btn-small deleteButton" algorithm_id="{{ algorithm._id }}">Delete
+                                </button>
                             </td>
                         </tr>
                         {% endfor%}

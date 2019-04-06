@@ -6,13 +6,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     background-image: url('../../static/img/background.jpg');
     background-size: cover;
+
 }
 
-
-
-#wrapper {
-    width: 100%;
-
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -23,6 +22,7 @@ body {
     position: relative;
     top: 55px;
     padding-top:50px;
+    display: block;
 }
 
 #page-index a {
@@ -121,6 +121,7 @@ label {
   padding-top: 10px;
   text-align: center;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 .card .card-action {
     border-top: 1px solid transparent;
@@ -334,9 +335,19 @@ input[type="search"]:not(.browser-default):focus:not([readonly]) {
 
 }
 
+.input-field .prefix {
+    top: 1rem;
+}
+
+
 .input-field .prefix.active {
     color: #ffcb9a !important;
 }
+
+input[type="text"]:not(.browser-default) {
+    height: 4rem;
+}
+
 
 /*------------------------------------------------------------------------------
     TABLE
@@ -404,13 +415,25 @@ input[type="search"]:not(.browser-default) {
 /* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
 
 @media(max-width:1600px) {
-
+        .row-cards {
+       width: 100%;
+    }
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:992px) {
+        #algorithm_results {
+        width: 90%;
+    }
 
+    .row-map {
+        width: 100%;
+    }
+    .dashboard-card {
+        width: 90%;
+        margin: auto;
+    }
 
 }
 
@@ -419,6 +442,30 @@ input[type="search"]:not(.browser-default) {
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:521px) {
+
+    .row-map,
+    .row-cards,
+    .row-form {
+        width: 100%;
+    }
+
+    .dashboard-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    #surveyElement label {
+    color: white;
+    font-size: 0.8em !important;
+    }
+
+    .sv_q_title {
+    font-size: 1em !important;
+    }
+
+    .table-card {
+        display: none;
+    }
 
 }
 

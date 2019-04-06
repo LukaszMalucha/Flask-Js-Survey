@@ -281,7 +281,7 @@ nav ul li:hover, nav ul li:active {
     .top-navbar .navbar-brand {
         width: 280px;
         font-size:  2rem;
-        padding: 20px;
+        padding: 10px;
     }
 
     .top-navbar .navbar-brand strong {
@@ -326,7 +326,7 @@ nav ul li:hover, nav ul li:active {
         height: 60px;
         width: 100%;
         font-size:  2rem;
-        padding: 20px;
+        padding: 10px;
 
 
     }
