@@ -20,7 +20,7 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 api = Api(app)
 
 Bootstrap(app)
