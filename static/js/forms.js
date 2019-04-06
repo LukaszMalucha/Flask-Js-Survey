@@ -5,6 +5,7 @@ Survey
     .applyTheme("default");
     var questions_data = questions;
     var answers_data = answers;
+    $('#algorithm_results').hide();
 
 var json = {
     title: "Characterize your Data task to find out what's the most suitable algorithm.",
@@ -92,7 +93,6 @@ survey
 
             .done(function(data) {
                  $('#algorithm_results').show();
-                 $('#main_page').show();
                  $('#results').text(data.result).show();
             });
 

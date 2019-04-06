@@ -1,5 +1,5 @@
 body {
-    background-image: url('../../static/img/background_form.png');
+    background-image: url('../../static/img/background.jpg');
     background-size: cover;
 }
 
@@ -9,10 +9,10 @@ body {
     max-width: 40%;
     padding: 15px 0px 0px 0px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #1a2026;
     border-color: transparent;
     border-radius: 15px;
-    color: #222222;
+    color: #FFCB9A;
     font-weight: bolder;
     margin-bottom: 50px;
 }
@@ -25,12 +25,12 @@ body {
     border-color: transparent;
     text-align: right;
     color: white;
-    background-color: #165d81;
+    background-color: #1a2734;
     font-size: 18px;
 }
 
 .btn-login:hover, .btn-login:active, .btn-login:focus {
-    background-color: #0f415a;
+    background-color: #121a23;
 }
 
 
@@ -41,9 +41,9 @@ body {
     margin: auto;
     font-size: 5rem;
     border-radius: 50px;
-    background-color: white;
+    background-color: #1a2026;
     padding: 3%;
-    color: #165d81;
+    color: white;
 }
 
 .form-box {
@@ -66,8 +66,7 @@ body {
 h6 {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #222;
-    color: grey;
+    color: white;
 }
 
 input[type="email"]:not(.browser-default):focus:not([readonly]),
