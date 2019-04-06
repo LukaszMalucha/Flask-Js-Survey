@@ -12,7 +12,7 @@
 How do I know which method of parameter estimation to choose? <br>
 
 It's hard to decide if you have so many different algorithms to your disposal. But with certain information given about analyzed dataset, we can narrow that choice to few best matches.
-Project is also an example of building connection between MongoDB, Flask Backend, and jQuery frontend.
+Project is also an example of building connection between <b>MongoDB</b> database, <b>Flask</b> Backend, and <b>jQuery</b> frontend.
 
 
 ## APP STRUCTURE
