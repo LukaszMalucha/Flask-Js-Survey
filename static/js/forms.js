@@ -91,9 +91,9 @@ survey
             })
 
             .done(function(data) {
-                 $('#successAlert').text(data.alert).show();
-
-
+                 $('#algorithm_results').show();
+                 $('#main_page').show();
+                 $('#results').text(data.result).show();
             });
 
     });

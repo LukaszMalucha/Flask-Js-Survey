@@ -51,36 +51,3 @@ test_are_equal(estimate_score(0), ["Not all the questions were answered"])
 test_are_equal(estimate_score(11), ["Not all the questions were answered"])
 test_are_equal(estimate_score(111), ["Not all the questions were answered"])
 test_are_equal(estimate_score(1111), ["Not all the questions were answered"])
-
-
-## Results Score
-
-
-def results(answers):
-    score = 0
-    for question, user_answer in answers.items():
-        if user_answer == 'Category':
-            score += 10000
-        elif user_answer == 'Quantity':
-            score += 20000
-        elif user_answer == 'Just looking':
-            score += 30000
-        elif user_answer == 'Labelled':
-            score += 1000
-        elif user_answer == 'Not labelled':
-            score += 2000
-        elif user_answer == 'Less than 100K samples':
-            score += 100
-        elif user_answer == 'More than 100K samples':
-            score += 200
-        elif user_answer == 'Known':
-            score += 10
-        elif user_answer == 'No idea':
-            score += 20
-        elif user_answer == 'Text data':
-            score += 1
-        elif user_answer == 'Other':
-            score += 2
-        else:
-            score += 0
-    return score

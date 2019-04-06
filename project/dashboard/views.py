@@ -3,8 +3,7 @@ from bson.objectid import ObjectId
 from bson import json_util, ObjectId
 import json
 
-from .estimator import estimate_results
-from .estimate import estimate_score
+from .estimator import estimate_score, estimate_results
 
 
 ## Blueprint Init
@@ -39,7 +38,8 @@ def results():
     answers = request.get_json()
     score = estimate_results(answers)
     result = estimate_score(score)
-    return jsonify({'alert': result})
+    result = ' & '.join(result)
+    return jsonify({'result': result})
 
 
 ####################################################################### Adding algorithms ################################################################################################################################

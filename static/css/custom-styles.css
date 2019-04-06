@@ -68,6 +68,10 @@ h2 {
     color: red;
 }
 
+.text-center {
+    text-align: center;
+}
+
 
 .box {
    display: flex;
@@ -163,6 +167,31 @@ h2 {
     margin-left: 10px;
 }
 
+
+
+
+#algorithm_results {
+    background-color: #1a2026;
+    width: 40%;
+    margin: auto;
+    display: none;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+#algorithm_results .card-title{
+    color: #FFCB9A;
+    text-align: center;
+}
+
+#algorithm_results .card-action {
+    text-align: center;
+}
+
+#results {
+    font-size: 20px;
+    color: white;
+}
 
 
 /*------------------------------------------------------------------------------
@@ -453,33 +482,28 @@ input[type="text"].valid {
 }
 
 
-.btn,
-.btn-large {
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+.btn-navigation {
+    width: 15%;
+    border-radius: 5px;
+    margin: auto;
+    background: #2b4056;
+    font-weight: 600;
+}
+
+#main_page {
+    display: none;
+}
+
+.btn-navigation:hover,
+.btn-navigation:focus {
+    background: #17232f;
     color: white;
-    background-color: #2b4056;
-    border-radius: 10px;
-    border: none;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 10px;
+    font-weight: 600;
 }
-
-.btn {
-    line-height: 25px;
-}
-
-.btn-large:hover,
-.btn-large:focus,
-.btn:hover,
-.btn:focus {
-    background-color: white;
-    color: #2b4056;
-}
-
-
-
 
 
 /*------------------------------------------------------------------------------
