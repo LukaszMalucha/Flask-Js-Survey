@@ -51,8 +51,8 @@ label {
     padding-left: 0px !important;
 }
 
-h2 {
-    color: black;
+.row-map h2 {
+    color: #FFCB9A;
     font-size: 20px;
     margin: 5px;
 }
@@ -82,6 +82,11 @@ h2 {
     display:none;
 }
 
+.img-map {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 
 /*------------------------------------------------------------------------------
     ROWS
@@ -92,12 +97,41 @@ h2 {
     width: 60%;
 }
 
+.row-cards {
+    width: 85%;
+}
+
+.row-map {
+    width: 40%;
+}
+
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS    
 ------------------------------------------------------------------------------*/
 
 .dashboard-card {
-    background: #1a2026
+    background: #1a2026;
+    border-radius: 10px;
+
+}
+
+.form-card {
+  background: #1a2026;
+  color: #FFCB9A;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.card .card-action {
+    border-top: 1px solid transparent;
+}
+
+.table-card {
+  background: #1a2026;
+  color: #FFCB9A;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
 
 }
 
@@ -147,6 +181,34 @@ h2 {
 
 .btn-card:hover, .btn-card:active, .btn-card:focus {
     background-color: #121a23;
+}
+
+.btn-small {
+   background-color: #273b4e;
+   border-radius: 10px;
+}
+
+.btn-small:hover, .btn-small:focus {
+    background-color: #b20000;
+    color: white;
+}
+
+table.dataTable tbody td {
+    padding: 8px !important;
+    line-height: 2rem;
+}
+
+.btn-map {
+    border-radius: 10px;
+    border-color: transparent;
+    color: white;
+    background-color: #273b4e;
+    font-size: 14px;
+}
+
+.btn-map:hover, .btn-map:focus {
+    background-color: #1a2734;
+    color: white;
 }
 
 /*------------------------------------------------------------------------------
@@ -246,22 +308,13 @@ h2 {
 }
 
 /*------------------------------------------------------------------------------
-    EDIT & ADD FORMS + TABLE
+    EDIT & ADD FORMS
 ------------------------------------------------------------------------------*/
 
 
-
-input[type=text],
-select,
-textarea {
-    width: 90%;
-    height: 50px;
-    padding: 12px;
+input[type=text] {
     border-radius: 10px;
     border-color: #1a2026;
-    box-sizing: border-box;
-    margin: 0px 50px 0px 15px;
-    resize: vertical;
     background-color: #1a2026;
     color: white;
 }
@@ -281,182 +334,65 @@ input[type="search"]:not(.browser-default):focus:not([readonly]) {
 
 }
 
-th,
-tr {
-    color: white;
-}
-
-.table {
-    background-color: #1a2026;
-}
-
-.table-responsive {
-
-}
-
-.table-striped>tbody>tr:nth-of-type(2n+1) {
-    background-color: #2a333c;
-}
-
-.table-striped>tbody>tr:nth-of-type(2n) {
-    background-color: #1a2026;
-}
-
-.table-bordered {
-    border-color: #2b4056;
-}
-
-
-.table-bordered>thead>tr>th {
-    border-color: #2b4056;
-    font-size: 14px;
-
-}
-
-.table-bordered>tbody>tr>td {
-    border-color: #2b4056;
-    font-size: 12px;
-
-}
-
-.table>tbody>tr>td {
-    vertical-align: middle !important;
-}
-
-#dataTables-example_info {
-    color: white;
-}
-
-.pagination>.active>a {
-    background-color: #1a2026;
-    border-color: #1a2026;
-}
-
-.pagination>.active>a:hover {
-    background-color: white;
-    color: black;
-}
-
-.pagination li.disabled a {
-    background-color: grey;
-    border-color: #1a2026;
-    color: white;
-}
-
-.pagination>li>a {
-    background-color: #2b4056;
-    border-color: #2b4056;
-    color: white;
-}
-
-
-
-.card .card-action {
-    border-top: none;
-}
-
-
-input[type="search"] {
-    color: white;
-}
-
-input[type="file"] {
-    color: white;
-}
-
-#navigation p {
-    font-size: 14px;
-}
-
-textarea:focus,
-input:focus {
-    outline: none;
-}
-
-input[type="text"]:focus:not([readonly]),
-input[type="text"].valid {
-    border-bottom: none;
-    box-shadow: none;
-}
-
-#field {
-    margin-left: 28px;
-}
-
-.select-wrapper {
-    background-color: #1a2026;
-}
-
-.select-wrapper input.select-dropdown {
-    border-bottom: none;
-    margin-left: 10px;
-    height: 30px;
-}
-
-.input-field .prefix~input {
-    width: 80%;
-    margin-top: 5px;
-}
-
-.prefix~.select-wrapper {
-    width: 90%;
-}
-
-.input-field .prefix~label {
-    margin-left: 30px;
-    color: white;
-}
-
-.input-field.col .prefix~.validate~label {
-    margin-left: 35px;
-    color: #FFCB9A;
-}
-
 .input-field .prefix.active {
-    color: #FFCB9A;
+    color: #ffcb9a !important;
 }
 
-#field_label {
-    margin-left: 32px;
-}
+/*------------------------------------------------------------------------------
+    TABLE
+------------------------------------------------------------------------------*/
 
-#field_label.active {
-    color: #FFCB9A;
-}
-
-
-#add_file {
-    margin: 10px;
-    color: #FFCB9A;
-}
-
-
-#q_field {
-    height: 40px;
-    margin-top: 0px;
-}
-
-
-.dropdown-content li>span {
+#DataTable {
+    width: 99%;
+    margin-bottom: 2%;
     color: white;
 }
 
-.dropdown-content li>span:hover {
-    background-color: #2b4056;
+#DataTable_info,
+#DataTable_length {
+    display: none;
 }
 
-.select-dropdown li.disabled>span {
+#DataTable_paginate {
+    float: inherit !important;
+    text-align: center;
 
-    color: #FFCB9A;
 }
 
-.caret {
-    border-top: none;
-    width: 15px;
+#DataTable_previous {
+    margin-left: -1% !important;
 }
 
-.select-wrapper span.caret {
-    color: #FFCB9A;
+.dataTables_wrapper .dataTables_filter {
+    text-align: left !important;
+}
+
+
+#DataTable_filter label {
+    font-size: 15px;
+}
+
+input[type="search"]:not(.browser-default) {
+    width: 75%;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) {
+    background-color: #1a2026;
+}
+
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #1a2026;
+}
+
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+    border-color: #494949;
+}
+
+.table-bordered > thead > tr {
+    background-color: #1a2734;
 }
 
 /*------------------------------------------------------------------------------

@@ -1,12 +1,8 @@
 from flask import render_template, redirect, url_for, request, Blueprint, jsonify
-from bson.objectid import ObjectId
-from bson import json_util, ObjectId
-import json
-
+from bson import ObjectId
 from .estimator import estimate_score, estimate_results
 
-
-## Blueprint Init
+# Blueprint Init
 
 dashboard_blueprint = Blueprint(
     'dashboard', __name__,
@@ -16,10 +12,7 @@ dashboard_blueprint = Blueprint(
 from app import mongo
 
 
-########################################################################## MAIN DASHBOARD ###################################################################################################################
-
-
-## MAIN DASHBOARD #######################################################
+# MAIN DASHBOARD
 
 @dashboard_blueprint.route('/', methods=['GET', 'POST'])
 def dashboard():
@@ -42,10 +35,7 @@ def results():
     return jsonify({'result': result})
 
 
-####################################################################### Adding algorithms ################################################################################################################################
-
-
-## ROUTES - Suggest Algorithm:
+# ROUTES - Suggest Algorithm:
 
 @dashboard_blueprint.route('/add_algorithm')
 def add_algorithm():
@@ -54,7 +44,7 @@ def add_algorithm():
     return render_template('add_request.html', suggested_algorithms=suggested_algorithms)
 
 
-## ROUTES - Save Algorithm:
+# ROUTES - Save Algorithm:
 
 @dashboard_blueprint.route('/insert_algorithm', methods=['POST'])
 def insert_algorithm():
@@ -63,15 +53,16 @@ def insert_algorithm():
     return redirect(url_for('dashboard.add_algorithm'))
 
 
-## ROUTES - Delete Algorithm:    
+# ROUTES - Delete Algorithm:
 
-@dashboard_blueprint.route('/delete_algorithm/<algorithm_id>')
-def delete_algorithm(algorithm_id):
+@dashboard_blueprint.route('/delete', methods=['DELETE'])
+def delete():
+    algorithm_id = request.form['id']
     mongo.db.suggested_algorithms.remove({'_id': ObjectId(algorithm_id)})
-    return redirect(url_for('dashboard.add_algorithm'))
+    return jsonify({'id': algorithm_id})
 
 
-## ROUTES - SciKit Map:      
+# ROUTES - SciKit Map:
 
 @dashboard_blueprint.route('/map')
 def map():
