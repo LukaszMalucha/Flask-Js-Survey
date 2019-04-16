@@ -1,5 +1,5 @@
 import os
-# import env
+import env
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -60,8 +60,8 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    # app.run(debug=True)
+    app.run(debug=True)
 
 # Heroku
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+#     port = int(os.environ.get('PORT', 5000))
+#     app.run(host='0.0.0.0', port=port)

@@ -7,7 +7,7 @@
 ![1](https://user-images.githubusercontent.com/26208598/55672680-a568f000-5895-11e9-94d2-92aff7f8984a.JPG)
 
 
-## PROJECT CASE:
+## PROJECT CASE
 
 How do I know which method of parameter estimation to choose? <br>
 
