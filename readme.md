@@ -1,6 +1,6 @@
 # ML Selector Project
 
-[Visit App on Heroku](https://mlselector1.herokuapp.com/)
+[Visit App on Heroku](https://mlselector.herokuapp.com/)
 
 <br>
 
