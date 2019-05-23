@@ -2,11 +2,21 @@
     MAIN  STYLES    
 ------------------------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 400 500;
+    src: url('/static/fonts/TTF/SourceSansPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: bold 600;
+    src: url('/static/fonts/TTF/SourceSansPro-Semibold.ttf');
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-image: url('../../static/img/background.jpg');
     background-size: cover;
-
 }
 
 html {
