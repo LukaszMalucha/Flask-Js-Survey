@@ -12,7 +12,7 @@ use_step_matcher('re')
 
 @given('I am on the homepage')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/chromedriver.exe')   ## path to chromedriver
+    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')   ## path to chromedriver
     page = HomePage(context.driver)
     context.driver.get(page.url)
 
