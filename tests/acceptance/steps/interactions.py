@@ -15,10 +15,10 @@ def step_impl(context, link_text):
 
     matching_links = [l for l in links if l.text == link_text]
     matching_links[0].click()
-    # if len(matching_links) > 0:
-    #     matching_links[0].click()
-    # else:
-    #     raise RuntimeError()
+    if len(matching_links) > 0:
+        matching_links[0].click()
+    else:
+        raise RuntimeError()
 
 @when('I click on the login')
 def step_impl(context):

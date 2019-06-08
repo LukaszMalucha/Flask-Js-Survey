@@ -2,12 +2,9 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
-    TITLE = By.TAG_NAME, 'strong'
-    NAV_LINKS = By.ID, 'navigation'
-    DROPDOWN = By.ID, 'trigger'
-    QUESTION_FORM = By.ID, 'question-form'
-    QUESTION = By.ID, 'question'
-    MATCH_BUTTON = By.ID, 'add'
-    ANSWER = By.ID, 'algorithm_answer'
+    LOGO = By.CLASS_NAME, 'company-logo'
+    NAV_LINKS = By.CLASS_NAME, 'nav-link'
+    DROPDOWN = By.ID, 'user_dropdown'
+    DROPDOWN_LINKS = By.CLASS_NAME, 'dropdown-link'
+    # SIDENAV_TRIGGER = By.CLASS_NAME, ''
     PAGE = By.ID, 'page-index'
-    LOGIN = By.ID, 'login'

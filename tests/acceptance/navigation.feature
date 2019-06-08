@@ -1,10 +1,10 @@
 Feature: Test navigation between pages
 
 
-  Scenario: Home can go to Map
-    Given I am on the homepage
-    When I click on the "SCIKIT MAP" link
-    Then I am on the map page
+#  Scenario: Home can go to Map
+#    Given I am on the homepage
+#    When I click on the "SCIKIT MAP" link
+#    Then I am on the map page
 
 #  Scenario: Map can go to Home
 #    Given I am on the map page

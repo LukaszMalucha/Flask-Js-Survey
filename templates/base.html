@@ -60,12 +60,12 @@
     <!-- DROPDOWN -->
     <ul id="dropdown1" class="dropdown-content">
         {% if current_user.email != "Guest" %}
-        <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        <li><a href="{{ url_for('userlogout') }}" class="dropdown-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
         </li>
         {% else %}
-        <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw"></i> Log In</a>
+        <li><a href="{{ url_for('userlogin') }}" class="dropdown-link"><i class="fa fa-user fa-fw"></i> Log In</a>
         </li>
-        <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks"></i> Register</a>
+        <li><a href="{{ url_for('userregister') }}" class="dropdown-link"><i class="fas fa-tasks"></i> Register</a>
         </li>
         {% endif %}
     </ul>

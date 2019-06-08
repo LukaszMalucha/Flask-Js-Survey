@@ -3,4 +3,6 @@ from selenium.webdriver.common.by import By
 
 class HomePageLocators:
 
-    MAP_LINK = By.ID, 'map-link'
+    QUESTION_FORM = By.ID, 'question-form'
+    FORM_TITLE = By.CLASS_NAME, 'sv_header'
+    QUESTION = By.CLASS_NAME, 'sv_q_title'
