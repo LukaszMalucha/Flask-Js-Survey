@@ -13,12 +13,14 @@ use_step_matcher('re')
 @given('I am on the homepage')
 def step_impl(context):
     context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')   ## path to chromedriver
+    context.driver.set_window_size(1440,900)
     page = HomePage(context.driver)
     context.driver.get(page.url)
 
 @given('I am on the map page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/chromedriver.exe')
+    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')   ## path to chromedriver
+    context.driver.set_window_size(1440,900)
     page = MapPage(context.driver)
     context.driver.get(page.url)
 

@@ -6,10 +6,10 @@ Feature: Test that page have correct content
 #    Then There is a title shown on the page
 #    And The title tag has content "ML Selector"
 
-  Scenario: Homepage has a correct title
-    Given I am on the homepage
-    Then There is a title shown on the page
-    And The title tag has content "ML Selector"
+#  Scenario: Homepage has a correct title
+#    Given I am on the homepage
+#    Then There is a title shown on the page
+#    And The title tag has content "ML Selector"
 #
 #  Scenario: Homepage has all questions
 #    Given I am on the homepage
