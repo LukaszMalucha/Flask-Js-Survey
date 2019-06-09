@@ -7,6 +7,24 @@ class HomePage(BasePage):
     def url(self):
         return super(HomePage, self).url + '/'  # access super class
 
-    @property  # no need to add parentheses when calling method
-    def map_link(self):
-        return self.driver.find_element(*HomePageLocators.MAP_LINK)  # Unpack tuple with asterisk
+    @property
+    def question_form(self):
+        return self.driver.find_element(*HomePageLocators.QUESTION_FORM)
+
+    @property
+    def form_title(self):
+        return self.driver.find_element(*HomePageLocators.FORM_TITLE)
+
+    @property
+    def question(self):
+        return self.driver.find_element(*HomePageLocators.QUESTION)
+
+    @property
+    def next_button(self):
+        return self.driver.find_element(*HomePageLocators.NEXT_BUTTON)
+
+    @property
+    def complete_button(self):
+        return self.driver.find_element(*HomePageLocators.COMPLETE_BUTTON)
+
+

@@ -12,23 +12,25 @@ use_step_matcher('re')
 
 @given('I am on the homepage')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')   ## path to chromedriver
-    context.driver.set_window_size(1440,900)
+    context.driver = webdriver.Chrome('chromedriver')  ## path to chromedriver
     page = HomePage(context.driver)
     context.driver.get(page.url)
 
+
 @given('I am on the map page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')   ## path to chromedriver
-    context.driver.set_window_size(1440,900)
+    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')  ## path to chromedriver
+    context.driver.set_window_size(1440, 900)
     page = MapPage(context.driver)
     context.driver.get(page.url)
+
 
 @given('I am on the signup page')
 def step_impl(context):
     context.driver = webdriver.Chrome('C:/chromedriver.exe')
     page = SignupPage(context.driver)
     context.driver.get(page.url)
+
 
 @given('I am on the login page')
 def step_impl(context):
@@ -44,21 +46,23 @@ def step_impl(context):
     context.driver.get(page.url)
 
 
-
 @then('I am on the homepage')
 def step_impl(context):
     expected_url = HomePage(context.driver).url
     assert context.driver.current_url == expected_url
+
 
 @then('I am on the signup page')
 def step_impl(context):
     expected_url = SignupPage(context.driver).url
     assert context.driver.current_url == expected_url
 
+
 @then('I am on the login page')
 def step_impl(context):
     expected_url = LoginPage(context.driver).url
     assert context.driver.current_url == expected_url
+
 
 @then('I am on the map page')
 def step_impl(context):
@@ -70,16 +74,3 @@ def step_impl(context):
 def step_impl(context):
     expected_url = SuggestPage(context.driver).url
     assert context.driver.current_url == expected_url
-
-
-
-
-
-
-
-
-
-
-
-
-

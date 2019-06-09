@@ -1,47 +1,31 @@
 from selenium.webdriver.common.by import By
-
+from selenium import webdriver
 from tests.acceptance.locators.base_page import BasePageLocators
-
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
+        self.driver.set_window_size(1440,900)
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--no-proxy-server')
+
 
     @property
     def url(self):
         return 'http://127.0.0.1:5000'
 
-    @property
-    def title(self):
-        return self.driver.find_element(*BasePageLocators.TITLE)
+    @property  # no need to add parentheses when calling method
+    def logo(self):
+        return self.driver.find_element(*BasePageLocators.LOGO) # Unpack tuple with asterisk
 
     @property
-    def navigation(self):
+    def navigation_links(self):
         return self.driver.find_elements(*BasePageLocators.NAV_LINKS)
 
     @property
-    def form(self):
-        return self.driver.find_element(*BasePageLocators.QUESTION_FORM)
-
-    @property
-    def dropdown(self):
+    def dropdown_menu(self):
         return self.driver.find_element(*BasePageLocators.DROPDOWN)
 
     @property
-    def question(self):
-        return self.driver.find_elements(*BasePageLocators.QUESTION)
-
-    @property
-    def match_button(self):
-        return self.driver.find_element(*BasePageLocators.MATCH_BUTTON)
-
-    @property
-    def answer(self):
-        return self.driver.find_element(*BasePageLocators.ANSWER)
-
-    def form_field(self, name):
-        return self.form.find_element(By.ID, name)
-
-    @property
-    def login(self):
-        return self.driver.find_element(*BasePageLocators.LOGIN)
+    def dropdown_links(self):
+        return self.driver.find_element(*BasePageLocators.DROPDOWN_LINKS)

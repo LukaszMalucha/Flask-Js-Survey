@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from tests.acceptance.locators.signup_page import SignupPageLocators
+from tests.acceptance.locators.register_page import SignupPageLocators
 from tests.acceptance.page_model.base_page import BasePage
 
 
