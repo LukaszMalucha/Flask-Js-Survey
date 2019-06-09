@@ -13,7 +13,7 @@
 
 <div class="row row-cards">
     <div class="col-sm-12 col-md-4 col-lg-3">
-        <form action="{{url_for('dashboard.insert_algorithm') }}" id="suggest-form" method="POST" class="col s12">
+        <form action="{{url_for('dashboard.insert_algorithm') }}" id="add-form" method="POST" class="col s12">
             <div class="card form-card">
                 <div class="card-content">
                     <span class="card-title">Add Algorithm</span>
@@ -21,20 +21,20 @@
 
                     <div class="input-field col s12">
                         <i class="material-icons prefix">assignment</i>
-                        <input id="q_field" name="algorithm" type="text">
-                        <label for="icon_prefix">Algorithm Name</label>
+                        <input id="algorithm" name="algorithm" type="text" required>
+                        <label for="algorithm">Algorithm Name</label>
                     </div>
 
                     <div class="input-field col s12">
                         <i class="material-icons prefix">assignment</i>
-                        <input id="q_field" name="description" type="text">
-                        <label for="icon_prefix">Short Description</label>
+                        <input id="description" name="description" type="text" required>
+                        <label for="description">Short Description</label>
                     </div>
                     <div class="input-field col s12" style="height:25px">
                     </div>
                 </div>
 
-                <button type="submit" class="btn-card"><span>Continue <i
+                <button type="submit" class="btn-card" id="addButton"><span>Continue <i
                         class="far fa-arrow-alt-circle-right"></i></span>
                 </button>
             </div>
@@ -60,7 +60,7 @@
                             <td class="center" id="suggested_algorithm">{{algorithm.algorithm}}</td>
                             <td class="center">{{algorithm.description}}</td>
                             <td class="center">
-                                <button class="btn btn-small deleteButton" algorithm_id="{{ algorithm._id }}">Delete
+                                <button class="btn btn-small delete-button" algorithm_id="{{ algorithm._id }}">Delete
                                 </button>
                             </td>
                         </tr>
@@ -72,5 +72,10 @@
             </div>
         </div>
     </div>
+</div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard.dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
 </div>
 {% endblock %}

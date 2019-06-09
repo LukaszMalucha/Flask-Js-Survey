@@ -222,6 +222,27 @@ table.dataTable tbody td {
     color: white;
 }
 
+
+.fixed-action-btn {
+   right: 170px;
+   bottom: 80px;
+
+}
+
+.btn-floating {
+    background-color: #1a2026;
+}
+
+.btn-floating i {
+    font-size: 24px;
+}
+
+.btn-floating:hover,
+.btn-floating:active,
+.btn-floating:focus {
+    background: #323232;
+}
+
 /*------------------------------------------------------------------------------
     ML SURVEY
 ------------------------------------------------------------------------------*/

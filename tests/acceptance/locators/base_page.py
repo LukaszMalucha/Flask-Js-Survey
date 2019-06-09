@@ -6,5 +6,6 @@ class BasePageLocators:
     NAV_LINKS = By.CLASS_NAME, 'nav-link'
     DROPDOWN = By.ID, 'user_dropdown'
     DROPDOWN_LINKS = By.CLASS_NAME, 'dropdown-link'
-    # SIDENAV_TRIGGER = By.CLASS_NAME, ''
+    SIDENAV_TRIGGER = By.CLASS_NAME, 'sidenav-trigger'
+
     PAGE = By.ID, 'page-index'
