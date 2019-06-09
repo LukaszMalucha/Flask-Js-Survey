@@ -1,9 +1,10 @@
 from selenium.webdriver.common.by import By
 
 
-class SignupPageLocators:
-    SIGNUP_FORM = By.ID, 'signup-form'
-    USERNAME_FIELD = By.ID, 'username'
+class RegisterPageLocators:
+    REGISTER_FORM = By.ID, 'form-register'
     EMAIL_FIELD = By.ID, 'email'
+    USERNAME_FIELD = By.ID, 'username'
     PASSWORD = By.ID, 'password'
-    SUBMIT_BUTTON = By.ID, 'submit-button'
+    CONFIRM_PASSWORD = By.ID, 'confirm'
+    SUBMIT_BUTTON = By.CLASS_NAME, 'btn-login'

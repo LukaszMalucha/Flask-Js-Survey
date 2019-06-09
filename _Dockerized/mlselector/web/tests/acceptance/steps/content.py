@@ -3,7 +3,7 @@ from behave import *
 from tests.acceptance.page_model.base_page import BasePage
 from tests.acceptance.page_model.login_page import LoginPage
 from tests.acceptance.page_model.map_page import MapPage
-from tests.acceptance.page_model.signup_page import SignupPage
+from tests.acceptance.page_model.register_page import SignupPage
 from tests.acceptance.page_model.suggest_page import SuggestPage
 
 use_step_matcher('re')

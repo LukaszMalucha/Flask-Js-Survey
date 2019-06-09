@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
-    LOGIN_FORM = By.ID, 'login-form'
-    USERNAME_FIELD = By.ID, 'username'
+    LOGIN_FORM = By.ID, 'form-signin'
+    EMAIL_FIELD = By.ID, 'email'
     PASSWORD = By.ID, 'password'
-    SUBMIT_BUTTON = By.ID, 'submit-button'
+    SUBMIT_BUTTON = By.CLASS_NAME, 'btn-login'
