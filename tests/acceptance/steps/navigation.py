@@ -4,47 +4,48 @@ from selenium import webdriver
 from tests.acceptance.page_model.home_page import HomePage
 from tests.acceptance.page_model.login_page import LoginPage
 from tests.acceptance.page_model.map_page import MapPage
-from tests.acceptance.page_model.register_page import SignupPage
-from tests.acceptance.page_model.suggest_page import SuggestPage
+from tests.acceptance.page_model.register_page import RegisterPage
+from tests.acceptance.page_model.add_algorithm_page import AddAlgorithmPage
 
 use_step_matcher('re')
 
 
 @given('I am on the homepage')
 def step_impl(context):
-    context.driver = webdriver.Chrome('chromedriver')  ## path to chromedriver
+    context.driver = webdriver.Chrome('chromedriver')  # path to chromedriver
     page = HomePage(context.driver)
     context.driver.get(page.url)
 
 
 @given('I am on the map page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/Chromedriver/chromedriver')  ## path to chromedriver
-    context.driver.set_window_size(1440, 900)
+    context.driver = webdriver.Chrome('chromedriver')
     page = MapPage(context.driver)
     context.driver.get(page.url)
 
 
-@given('I am on the signup page')
+@given('I am on the register page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/chromedriver.exe')
-    page = SignupPage(context.driver)
+    context.driver = webdriver.Chrome('chromedriver')
+    page = RegisterPage(context.driver)
     context.driver.get(page.url)
 
 
 @given('I am on the login page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/chromedriver.exe')
+    context.driver = webdriver.Chrome('chromedriver')
     page = LoginPage(context.driver)
     context.driver.get(page.url)
 
 
-@given('I am on the suggest page')
+@given('I am on the add algorithm page')
 def step_impl(context):
-    context.driver = webdriver.Chrome('C:/chromedriver.exe')
-    page = SuggestPage(context.driver)
+    context.driver = webdriver.Chrome('chromedriver')
+    page = AddAlgorithmPage(context.driver)
     context.driver.get(page.url)
 
+
+###########################################################
 
 @then('I am on the homepage')
 def step_impl(context):
@@ -52,9 +53,9 @@ def step_impl(context):
     assert context.driver.current_url == expected_url
 
 
-@then('I am on the signup page')
+@then('I am on the register page')
 def step_impl(context):
-    expected_url = SignupPage(context.driver).url
+    expected_url = RegisterPage(context.driver).url
     assert context.driver.current_url == expected_url
 
 
@@ -70,7 +71,7 @@ def step_impl(context):
     assert context.driver.current_url == expected_url
 
 
-@then('I am on the suggest page')
+@then('I am on the add algorithm page')
 def step_impl(context):
-    expected_url = SuggestPage(context.driver).url
+    expected_url = AddAlgorithmPage(context.driver).url
     assert context.driver.current_url == expected_url

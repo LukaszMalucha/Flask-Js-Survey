@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from tests.acceptance.locators.add_page import SuggestPageLocators
+from tests.acceptance.locators.add_algorithm_page import SuggestPageLocators
 from tests.acceptance.page_model.base_page import BasePage
 
 

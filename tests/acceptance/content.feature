@@ -1,9 +1,9 @@
 Feature: Test that page have correct content
 
 
-  Scenario: Homepage has a logo
-    Given I am on the homepage
-    Then There is a logo shown on the page
+#  Scenario: Homepage has a logo
+#    Given I am on the homepage
+#    Then There is a logo shown on the page
 #
 #
 #
@@ -19,13 +19,19 @@ Feature: Test that page have correct content
 #   And I wait for the page to load
 #   Then I can see there is a map on the page
 #
-#  Scenario: Signup page loads the form
-#   Given I am on the signup page
-#   Then I can see there is a signup form on the page
-#
+#  Scenario: Register page loads the form
+#   Given I am on the register page
+#   Then I can see there is a register form on the page
+
 #  Scenario: Login page loads the form
 #   Given I am on the login page
 #   Then I can see there is a login form on the page
+
+  Scenario: Add Algorithm page loads the form and table
+    Given I am on the add algorithm page
+    Then I can see there is an add algorithm form on the page
+    And I can see there is a table on the page
+#    And Algorithm "Algorithm" is shown on the table
 
 
 

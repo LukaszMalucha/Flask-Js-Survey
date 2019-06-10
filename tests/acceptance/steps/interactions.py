@@ -2,8 +2,8 @@ from behave import *
 
 from tests.acceptance.page_model.base_page import BasePage
 from tests.acceptance.page_model.login_page import LoginPage
-from tests.acceptance.page_model.register_page import SignupPage
-from tests.acceptance.page_model.suggest_page import SuggestPage
+from tests.acceptance.page_model.register_page import RegisterPage
+from tests.acceptance.page_model.add_algorithm_page import AddAlgorithmPage
 
 use_step_matcher('re')
 
@@ -34,7 +34,7 @@ def step_impl(context):
 
 @when('I enter "(.*)" in the "(.*)" field')
 def step_impl(context, content, field_name):
-    page = SignupPage(context.driver)
+    page = RegisterPage(context.driver)
     page.form_field(field_name).send_keys(content)
 
 
@@ -52,7 +52,7 @@ def step_impl(context, field_name):
 
 @when('I press the submit button')
 def step_impl(context):
-    page = SignupPage(context.driver)
+    page = RegisterPage(context.driver)
     page.submit_button.click()
 
 
@@ -70,10 +70,10 @@ def step_impl(context):
 
 @when('I type "(.*)" in "(.*)" field')
 def step_impl(context, content, field_name):
-    page = SuggestPage(context.driver)
+    page = AddAlgorithmPage(context.driver)
     page.form_field(field_name).send_keys(content)
 
 @when('I press suggest algorithm button')
 def step_impl(context):
-    page = SuggestPage(context.driver)
+    page = AddAlgorithmPage(context.driver)
     page.suggest_button.click()

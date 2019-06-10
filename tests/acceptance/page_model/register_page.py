@@ -4,14 +4,14 @@ from tests.acceptance.locators.register_page import RegisterPageLocators
 from tests.acceptance.page_model.base_page import BasePage
 
 
-class SignupPage(BasePage):
+class RegisterPage(BasePage):
     @property
     def url(self):
-        return super(SignupPage, self).url + '/signup'
+        return super(RegisterPage, self).url + '/register'
 
     @property
     def form(self):
-        return self.driver.find_element(*RegisterPageLocators.SIGNUP_FORM)
+        return self.driver.find_element(*RegisterPageLocators.REGISTER_FORM)
 
     @property
     def submit_button(self):
