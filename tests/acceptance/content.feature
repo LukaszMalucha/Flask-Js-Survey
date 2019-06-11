@@ -27,12 +27,12 @@ Feature: Test that page have correct content
 #   Given I am on the login page
 #   Then I can see there is a login form on the page
 
-  Scenario: Add Algorithm page loads the form and table
-    Given I am on the add algorithm page
-    Then I can see there is an add algorithm form on the page
-    And I can see there is a table on the page
-    And I can see there are algorithms in the table
-    And Algorithm "Algorithm" is shown on the table
+#  Scenario: Add Algorithm page loads the form and table
+#    Given I am on the add algorithm page
+#    Then I can see there is an add algorithm form on the page
+#    And I can see there is a table on the page
+#    And I can see there are algorithms in the table
+#    And Algorithm "Algorithm" is shown on the table
 
 
 

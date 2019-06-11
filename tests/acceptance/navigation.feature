@@ -1,9 +1,10 @@
 Feature: Test navigation between pages
 
 
-#  Scenario: Home can go to Map
+#  Scenario: Home can go to SciKit Map
 #    Given I am on the homepage
-#    When I click on the "SCIKIT MAP" link
+#    And I wait for the page to load
+#    When I click on the "SciKit Map" link
 #    Then I am on the map page
 
 #  Scenario: Map can go to Home
@@ -11,10 +12,11 @@ Feature: Test navigation between pages
 #    When I click on the "BACK TO MAIN PAGE" link
 #    Then I am on the homepage
 #
-#  Scenario: Home can go Suggest
+#  Scenario: Home can go to Add Algorithms
 #    Given I am on the homepage
-#    When I click on the "SUGGEST" link
-#    Then I am on the suggest page
+#    And I wait for the page to load
+#    When I click on the "Algorithms" link
+#    Then I am on the add algorithm page
 #
 #  Scenario: Suggest can go Home
 #    Given I am on the suggest page
