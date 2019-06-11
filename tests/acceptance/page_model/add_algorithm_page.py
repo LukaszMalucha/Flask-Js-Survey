@@ -22,8 +22,8 @@ class AddAlgorithmPage(BasePage):
         return self.driver.find_element(*AddAlgorithmPageLocators.ADD_BUTTON)
 
     @property
-    def suggested_algorithm(self):
-        return self.driver.find_elements(*AddAlgorithmPageLocators.SUGGESTED_ALGORITHM)
+    def algorithms(self):
+        return self.driver.find_elements(*AddAlgorithmPageLocators.ALGORITHM)
 
 
     def form_field(self, name):

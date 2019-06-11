@@ -15,20 +15,24 @@ def step_impl(context):
     page = BasePage(context.driver)
     assert page.logo.is_displayed()
 
+
 @then('There is question form shown on the page')
 def step_impl(context):
     page = HomePage(context.driver)
     assert page.question_form.is_displayed()
+
 
 @then('There is a form title shown on the page')
 def step_impl(context):
     page = HomePage(context.driver)
     assert page.form_title.is_displayed()
 
+
 @then('There is a question shown on the page')
 def step_impl(context):
     page = HomePage(context.driver)
     assert page.question.is_displayed()
+
 
 @then('There is a next button shown on the page')
 def step_impl(context):
@@ -59,22 +63,23 @@ def step_impl(context):
     page = AddAlgorithmPage(context.driver)
     assert page.form.is_displayed()
 
+
 @then('I can see there is a table on the page')
 def step_impl(context):
     page = AddAlgorithmPage(context.driver)
     assert page.data_table.is_displayed()
 
 
-@then('Algorithm "(.*)" is shown in the table')
+@then('I can see there are algorithms in the table')
+def step_impl(context):
+    page = AddAlgorithmPage(context.driver)
+    algorithms = [algo for algo in page.algorithms]
+    assert len(algorithms) > 0
+
+
+@then('Algorithm "(.*)" is shown on the table')
 def step_impl(context, content):
     page = AddAlgorithmPage(context.driver)
-    suggested_algorithm = [algo for algo in page.suggested_algorithm if algo.text == content]
-    assert len(suggested_algorithm) > 0
-    assert all([algo.is_displayed() for algo in suggested_algorithm])
-
-
-#
-# @then('The answer is "Suggested Machine Learning algorithms are: Naive Bayes & LinearSVC"')
-# def step_impl(context):
-#     page = BasePage(context.driver)
-#     assert page.answer.text == "Suggested Machine Learning algorithms are: Naive Bayes & LinearSVC"
+    algorithm = [algo for algo in page.algorithms if algo.text == content]
+    assert len(algorithm) > 0
+    assert all([algo.is_displayed() for algo in algorithm])
