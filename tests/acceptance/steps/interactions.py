@@ -18,16 +18,29 @@ def step_impl(context, link_text):
     else:
         raise RuntimeError()
 
-@when('I click on the login')
+@when('I click on the Back to Home button')
 def step_impl(context):
     page = BasePage(context.driver)
-    page.login.click()
+    page.back_to_home_button.click()
 
 
 @when('I click on the dropdown menu')
 def step_impl(context):
     page = BasePage(context.driver)
-    page.dropdown.click()
+    page.dropdown_menu.click()
+
+
+@when('I click on the "(.*)" dropdown link')
+def step_impl(context, link_text):
+    page = BasePage(context.driver)
+    links = page.dropdown_links
+    matching_links = [l for l in links if l.text == link_text]
+    if len(matching_links) > 0:
+        matching_links[0].click()
+    else:
+        raise RuntimeError()
+
+
 
 
 @when('I enter "(.*)" in the "(.*)" field')
