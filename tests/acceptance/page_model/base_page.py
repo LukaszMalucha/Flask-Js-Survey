@@ -33,3 +33,5 @@ class BasePage:
     @property
     def back_to_home_button(self):
         return self.driver.find_element(*BasePageLocators.BACK_TO_HOME)
+
+

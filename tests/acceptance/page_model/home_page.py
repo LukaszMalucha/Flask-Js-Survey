@@ -20,11 +20,21 @@ class HomePage(BasePage):
         return self.driver.find_element(*HomePageLocators.QUESTION)
 
     @property
+    def form_fields(self):
+        return  self.driver.find_elements(*HomePageLocators.FORM_FIELD)
+
+    @property
     def next_button(self):
         return self.driver.find_element(*HomePageLocators.NEXT_BUTTON)
 
     @property
     def complete_button(self):
         return self.driver.find_element(*HomePageLocators.COMPLETE_BUTTON)
+
+    @property
+    def results(self):
+        return self.driver.find_element(*HomePageLocators.RESULTS)
+
+
 
 

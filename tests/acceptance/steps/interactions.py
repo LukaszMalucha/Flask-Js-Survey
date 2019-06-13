@@ -4,6 +4,7 @@ from tests.acceptance.page_model.base_page import BasePage
 from tests.acceptance.page_model.login_page import LoginPage
 from tests.acceptance.page_model.register_page import RegisterPage
 from tests.acceptance.page_model.add_algorithm_page import AddAlgorithmPage
+from tests.acceptance.page_model.home_page import HomePage
 
 use_step_matcher('re')
 
@@ -72,10 +73,22 @@ def step_impl(context):
     page.submit_button.click()
 
 
-@when('I press the match estimator button')
+@when('I choose a first answer')
 def step_impl(context):
-    page = BasePage(context.driver)
-    page.match_button.click()
+    page = HomePage(context.driver)
+    page.form_fields[0].click()
+
+@when('I press the Next button')
+def step_impl(context):
+    page = HomePage(context.driver)
+    page.next_button.click()
+
+@when('I press the Complete button')
+def step_impl(context):
+    page = HomePage(context.driver)
+    page.complete_button.click()
+
+
 
 
 @when('I type "(.*)" in "(.*)" field')

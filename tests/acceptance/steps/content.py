@@ -58,6 +58,12 @@ def step_impl(context):
     assert page.form.is_displayed()
 
 
+@then('I can see there are results on the page')
+def step_impl(context):
+    page = HomePage(context.driver)
+    assert page.results.is_displayed()
+
+
 @then('I can see there is an add algorithm form on the page')
 def step_impl(context):
     page = AddAlgorithmPage(context.driver)

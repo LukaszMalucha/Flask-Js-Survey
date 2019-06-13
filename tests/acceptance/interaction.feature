@@ -20,15 +20,26 @@ Feature: Test that forms work correctly
 #    Then I am on the homepage
 #
 #
-  Scenario: Homepage questions give answer
+  Scenario: Filled form gives answer
     Given I am on the homepage
-    When I choose "Category" field
-    And I choose "Labelled" field
-    And I choose "Less than 100K samples" field
-    And I choose "Known" field
-    And I choose "Text data" field
-    And I press the match estimator button
-    Then The answer is "Suggested Machine Learning algorithms are: Naive Bayes & LinearSVC"
+    When I choose a first answer
+    When I press the Next button
+    And I wait for a second
+    And I choose a first answer
+    And I press the Next button
+    And I wait for a second
+    And I choose a first answer
+    And I press the Next button
+    And I wait for a second
+    And I choose a first answer
+    And I press the Next button
+    And I wait for a second
+    And I choose a first answer
+    And I press the Complete button
+    And I wait for a second
+    Then I can see there are results on the page
+
+
 #
 #
 #  Scenario: Suggested Algorithm goes to database
