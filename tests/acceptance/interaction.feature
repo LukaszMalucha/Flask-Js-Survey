@@ -2,32 +2,33 @@ Feature: Test that forms work correctly
 
 
 
-#  Scenario: Signup page registers user
-#    Given I am on the signup page
+#  Scenario: Register page registers user
+#    Given I am on the register page
 #    When I enter "tester" in the "username" field
 #    And I enter "tester@gmail.com" in the "email" field
-#    And I enter "12341234" in the "password" field
+#    And I enter "tester1234" in the "password" field
+#    And I enter "tester1234" in the "confirm" field
 #    And I press the submit button
-#    Then I am on the login page
+#    Then I am on the homepage
 
 
 #  Scenario: Login page login user
 #    Given I am on the login page
-#    When I enter "tester" in the "username" login field
-#    And I enter "12341234" in the "password" login field
+#    When I enter "tester@gmail.com" in the "email" login field
+#    And I enter "tester1234" in the "password" login field
 #    And I press the submit button
 #    Then I am on the homepage
 #
 #
-#  Scenario: Homepage questions give answer
-#    Given I am on the homepage
-#    When I choose "Category" field
-#    And I choose "Labelled" field
-#    And I choose "Less than 100K samples" field
-#    And I choose "Known" field
-#    And I choose "Text data" field
-#    And I press the match estimator button
-#    Then The answer is "Suggested Machine Learning algorithms are: Naive Bayes & LinearSVC"
+  Scenario: Homepage questions give answer
+    Given I am on the homepage
+    When I choose "Category" field
+    And I choose "Labelled" field
+    And I choose "Less than 100K samples" field
+    And I choose "Known" field
+    And I choose "Text data" field
+    And I press the match estimator button
+    Then The answer is "Suggested Machine Learning algorithms are: Naive Bayes & LinearSVC"
 #
 #
 #  Scenario: Suggested Algorithm goes to database

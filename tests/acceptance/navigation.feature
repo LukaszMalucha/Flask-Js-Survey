@@ -1,17 +1,17 @@
 Feature: Test navigation between pages
-
-
+#
+#
 #  Scenario: Home can go to SciKit Map
 #    Given I am on the homepage
 #    And I wait for the page to load
 #    When I click on the "SciKit Map" link
 #    Then I am on the map page
-
+#
 #  Scenario: Map can go to Home
 #    Given I am on the map page
 #    When I click on the Back to Home button
 #    Then I am on the homepage
-
+#
 #  Scenario: Home can go to Add Algorithms
 #    Given I am on the homepage
 #    And I wait for the page to load

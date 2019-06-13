@@ -69,13 +69,15 @@ h6 {
     color: white;
 }
 
+
+
 input[type="email"]:not(.browser-default):focus:not([readonly]),
 input[type="password"]:not(.browser-default):focus:not([readonly]),
 input[type="text"]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid #165d81;
     box-shadow: 0 1px 0 0 #26a69a;
     text-align: center;
-
+    color: white;
 }
 
 
@@ -83,10 +85,10 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) {
 input[type="email"]:not(.browser-default),
 input[type="password"]:not(.browser-default),
 input[type="text"]:not(.browser-default) {
-
     font-size: 14px;
     height: 2.5rem;
     text-align: center;
+    color: white;
 }
 
 

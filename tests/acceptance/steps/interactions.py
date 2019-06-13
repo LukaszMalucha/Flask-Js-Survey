@@ -18,6 +18,7 @@ def step_impl(context, link_text):
     else:
         raise RuntimeError()
 
+
 @when('I click on the Back to Home button')
 def step_impl(context):
     page = BasePage(context.driver)
@@ -39,8 +40,6 @@ def step_impl(context, link_text):
         matching_links[0].click()
     else:
         raise RuntimeError()
-
-
 
 
 @when('I enter "(.*)" in the "(.*)" field')
@@ -83,6 +82,7 @@ def step_impl(context):
 def step_impl(context, content, field_name):
     page = AddAlgorithmPage(context.driver)
     page.form_field(field_name).send_keys(content)
+
 
 @when('I press suggest algorithm button')
 def step_impl(context):
