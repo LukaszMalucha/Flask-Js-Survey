@@ -97,7 +97,7 @@ def step_impl(context, content, field_name):
     page.form_field(field_name).send_keys(content)
 
 
-@when('I press suggest algorithm button')
+@when('I press add algorithm button')
 def step_impl(context):
     page = AddAlgorithmPage(context.driver)
-    page.suggest_button.click()
+    page.add_button.click()

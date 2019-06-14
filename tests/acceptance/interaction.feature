@@ -20,33 +20,31 @@ Feature: Test that forms work correctly
 #    Then I am on the homepage
 #
 #
-  Scenario: Filled form gives answer
-    Given I am on the homepage
-    When I choose a first answer
-    When I press the Next button
-    And I wait for a second
-    And I choose a first answer
-    And I press the Next button
-    And I wait for a second
-    And I choose a first answer
-    And I press the Next button
-    And I wait for a second
-    And I choose a first answer
-    And I press the Next button
-    And I wait for a second
-    And I choose a first answer
-    And I press the Complete button
-    And I wait for a second
-    Then I can see there are results on the page
+#  Scenario: Filled form gives answer
+#    Given I am on the homepage
+#    When I choose a first answer
+#    When I press the Next button
+#    And I wait for a second
+#    And I choose a first answer
+#    And I press the Next button
+#    And I wait for a second
+#    And I choose a first answer
+#    And I press the Next button
+#    And I wait for a second
+#    And I choose a first answer
+#    And I press the Next button
+#    And I wait for a second
+#    And I choose a first answer
+#    And I press the Complete button
+#    And I wait for a second
+#    Then I can see there are results on the page
 
 
-#
-#
-#  Scenario: Suggested Algorithm goes to database
-#    Given I am on the suggest page
+#  Scenario: New Algorithm is saved to database
+#    Given I am on the add algorithm page
 #    When I type "testing" in "algorithm" field
 #    And I type "testing" in "description" field
-#    And I press suggest algorithm button
-#    Then Algorithm "testing" is shown in the table
-#
+#    And I press add algorithm button
+#    Then Algorithm "testing" is shown on the table
+
 
