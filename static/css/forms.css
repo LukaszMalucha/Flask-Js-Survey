@@ -27,6 +27,7 @@ body {
     color: white;
     background-color: #1a2734;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .btn-login:hover, .btn-login:active, .btn-login:focus {
@@ -61,6 +62,10 @@ body {
     text-align: right;
     padding-top: 2px !important;
     margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 2rem;
 }
 
 h6 {

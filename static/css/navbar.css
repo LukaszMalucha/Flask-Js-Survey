@@ -8,7 +8,7 @@
 
 
 .top-navbar .navbar-brand strong {
-    font-size: 24px;
+    font-size: 13px;
     font-weight: bold;
     display: block;
     color: white;
@@ -22,11 +22,12 @@
     width: 100%;
     z-index: 300;
     border: none;
-    height: 60px;
-    padding-left: 9%;
-    padding-right: 8%;
+    height: 42px;
+    padding-left: 8.5%;
+    padding-right: 8.5%;
     padding-top: 0px;
     padding-bottom: 0px;
+    min-height: 42px;
 
 }
 
@@ -46,21 +47,25 @@
 }
 
 .navbar-brand .company-logo {
-    height: 3.5rem;
+    height: 2.2rem;
 
 }
 
 .navbar-brand .material-icons, .navbar-brand .fab, .navbar-brand .fas {
     float: left;
-    font-size: 26px;
+    font-size: 18px;
     margin-right: 5px;
-    margin-top: -2px;
+    margin-top: -1px;
     height: auto;
     color: white;
 }
 
 .nav > li {
     height: 100%;
+}
+
+nav ul a {
+    font-size: 13px;
 }
 
 .nav > li > a {
@@ -71,19 +76,19 @@
 
 .nav-link {
     height: 100% !important;
-    padding: 20px 15px 20px 15px !important;
+    padding: 14px 0px 20px 25px !important;
 }
 
 
 .nav i, .nav i.material-icons {
     height:20px;
-    font-size: 15px;
+    font-size: 13px;
     margin-right: 5px;
 }
 
 .top-navbar .navbar-right {
     width: auto;
-    height: 60px;
+    height: 100%;
     margin: 0px;
     line-height: 1;
     padding: 0px;
@@ -93,7 +98,7 @@
 
 .top-navbar .navbar-right>a {
     padding: 0px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .top-navbar .navbar-right>a>i {
@@ -107,16 +112,17 @@ nav ul b {
 }
 
 .dropdown-content {
-    width: 150px !important;
-    right: -50px !important;
-    top: 60px !important;
+    min-width: 150px !important;
+    right: -40px !important;
+    top: 42px !important;
 
 }
 
 .dropdown-content li>a {
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
 }
+
 .dropdown-content li>a>i {
     margin-right: 12px;
     font-size: 18px;
@@ -127,8 +133,6 @@ nav ul b {
     font-size: 16px;
 
 }
-
-
 
 
 .sidenav-trigger {
@@ -188,7 +192,7 @@ nav ul a {
 
 .dropdown-content li>a {
     color: white;
-    background-color: #191919;
+    background-color: #1a2026;
 }
 
 .dropdown-content li>fa {
@@ -254,7 +258,7 @@ nav ul li:hover, nav ul li:active {
 ------------------------------------------------------------------------------*/
 
 
-@media(max-width:1600px) {
+@media(max-width:1700px) {
     .top-navbar {
         padding-left: 2%;
         padding-right: 1%;
@@ -302,18 +306,21 @@ nav ul li:hover, nav ul li:active {
     }
 
     .navbar-header {
-    width: 70%;
+        width: 70%;
     }
     nav a.sidenav-trigger {
         line-height: 1;
     }
 
     nav a.sidenav-trigger i {
-    height: 60px;
-    line-height: 1;
+        height: 60px;
+        line-height: 1;
     }
 
     #trigger {
+        position: relative;
+        top: -10px;
+        left: 24px;
         margin: 10px 0px 10px 0px;
     }
 

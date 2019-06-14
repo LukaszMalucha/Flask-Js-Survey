@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/acceptance/interaction.feature" beforeDir="false" afterPath="$PROJECT_DIR$/tests/acceptance/interaction.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/custom-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/navbar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,44 +15,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/interaction.feature">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/content.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/content.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/waits.py">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/custom-styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="284" column="21" selection-start-line="284" selection-start-column="21" selection-end-line="284" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/forms.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -58,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/interactions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+            <state relative-caret-position="1598">
+              <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -68,19 +67,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/base_page.py">
+        <entry file="file://$PROJECT_DIR$/tests/acceptance/page_model/add_algorithm_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="289">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/home_page.py">
+        <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/add_algorithm_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -133,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>questio</find>
       <find>40px</find>
       <find>top:</find>
       <find>#314a60</find>
@@ -146,7 +147,6 @@
       <find>#main_card</find>
       <find>h2</find>
       <find>#add</find>
-      <find>btn</find>
       <find>quest</find>
       <find>ff</find>
       <find>dashboard-card</find>
@@ -163,6 +163,8 @@
       <find>form-signin</find>
       <find>SuggestPageLocators</find>
       <find>suggested_algorithm</find>
+      <find>btn</find>
+      <find>butt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -195,11 +197,9 @@
         <option value="$PROJECT_DIR$/static/js/custom-scripts.js" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/project/dashboard/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/static/css/navbar.css" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/tests/mock.py" />
         <option value="$PROJECT_DIR$/mock.py" />
         <option value="$PROJECT_DIR$/tests/unit/mock_test.py" />
@@ -208,7 +208,6 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/tests/acceptance/locators/add_page.py" />
         <option value="$PROJECT_DIR$/project/dashboard/templates/add_request.html" />
-        <option value="$PROJECT_DIR$/static/css/custom-styles.css" />
         <option value="$PROJECT_DIR$/project/dashboard/templates/map.html" />
         <option value="$PROJECT_DIR$/templates/user/register.html" />
         <option value="$PROJECT_DIR$/tests/acceptance/locators/signup_page.py" />
@@ -224,13 +223,16 @@
         <option value="$PROJECT_DIR$/models/forms.py" />
         <option value="$PROJECT_DIR$/static/css/forms.css" />
         <option value="$PROJECT_DIR$/tests/acceptance/locators/base_page.py" />
-        <option value="$PROJECT_DIR$/tests/acceptance/steps/interactions.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/steps/waits.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/page_model/base_page.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/locators/home_page.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/page_model/home_page.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/steps/content.py" />
+        <option value="$PROJECT_DIR$/tests/acceptance/steps/interactions.py" />
         <option value="$PROJECT_DIR$/tests/acceptance/interaction.feature" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/css/navbar.css" />
+        <option value="$PROJECT_DIR$/static/css/custom-styles.css" />
       </list>
     </option>
   </component>
@@ -347,21 +349,21 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blockchain" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workshop\mlselector" />
-      <recent name="C:\Workshop\mlselector\static\img" />
-      <recent name="D:\Workshop\mlselector\static" />
-      <recent name="D:\Workshop\mlselector\static\img" />
-      <recent name="D:\Workshop\mlselector\_Dockerized" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workshop\mlselector" />
       <recent name="C:\Workshop\mlselector\tests\unit" />
       <recent name="D:\Workshop\mlselector\static\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector\static\css" />
+      <recent name="C:\Workshop\mlselector" />
+      <recent name="C:\Workshop\mlselector\static\img" />
+      <recent name="D:\Workshop\mlselector\static" />
+      <recent name="D:\Workshop\mlselector\static\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -548,18 +550,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49736565" visible="true" weight="0.39219934" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49736565" weight="0.39219934" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50263435" side_tool="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -590,13 +592,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -717,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/navbar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4522">
@@ -751,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/custom-styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/dashboard/templates/map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -778,34 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/page_model/add_algorithm_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/map_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/add_algorithm_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -907,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/forms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/waits.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -935,6 +882,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/interaction.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/content.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/content.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/interactions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/page_model/add_algorithm_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/acceptance/locators/add_algorithm_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -968,37 +966,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/interactions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/content.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/steps/content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/acceptance/interaction.feature">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/custom-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="284" column="21" selection-start-line="284" selection-start-column="21" selection-end-line="284" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/forms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
         </state>
       </provider>
     </entry>

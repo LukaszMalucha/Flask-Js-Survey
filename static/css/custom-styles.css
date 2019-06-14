@@ -187,7 +187,6 @@ label {
     color: white;
     background-color: #1a2734;
     font-size: 18px;
-
 }
 
 .btn-card:hover, .btn-card:active, .btn-card:focus {
@@ -197,6 +196,7 @@ label {
 .btn-small {
    background-color: #273b4e;
    border-radius: 10px;
+   font-weight: 600;
 }
 
 .btn-small:hover, .btn-small:focus {
@@ -258,6 +258,7 @@ table.dataTable tbody td {
 #surveyElement h3 {
     color: #FFCB9A;
     font-weight: 500;
+    font-size: 1.5em;
 
 }
 
@@ -281,6 +282,7 @@ table.dataTable tbody td {
 .sv_q_title {
     color: #FFCB9A;
     font-size: 1.2em !important;
+    font-weight: 600;
 }
 
 #surveyElement label {
@@ -333,7 +335,7 @@ table.dataTable tbody td {
 
 .footer p {
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
     padding: 15px 0px;
     text-align: center;
