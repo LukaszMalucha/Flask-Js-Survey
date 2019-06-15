@@ -261,7 +261,7 @@ nav ul li:hover, nav ul li:active {
 @media(max-width:1700px) {
     .top-navbar {
         padding-left: 2%;
-        padding-right: 1%;
+        padding-right: 1.5%;
     }
 
     .navbar-header {

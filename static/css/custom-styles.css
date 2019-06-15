@@ -451,12 +451,18 @@ input[type="search"]:not(.browser-default) {
         .row-cards {
        width: 100%;
     }
+
+    .fixed-action-btn {
+       right: 20px;
+       bottom: 80px;
+
+    }
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:992px) {
-        #algorithm_results {
+    #algorithm_results {
         width: 90%;
     }
 
@@ -466,6 +472,12 @@ input[type="search"]:not(.browser-default) {
     .dashboard-card {
         width: 90%;
         margin: auto;
+    }
+
+    .fixed-action-btn {
+       right: 20px;
+       bottom: 80px;
+
     }
 
 }
