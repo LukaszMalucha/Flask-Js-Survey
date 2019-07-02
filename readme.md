@@ -75,9 +75,3 @@ Selenium | UnitTest
 
 [Scikit-Learn Map](http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
 
-
-<br><br>
-
-Thank you,
-
-Lukasz Malucha
