@@ -1,7 +1,0 @@
-env.py
-geocoder.md
-*.pyc
-.~c9
-__pycache__?
-venv/*
-idea/*
