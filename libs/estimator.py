@@ -1,4 +1,4 @@
-## Assign specific estimators to the given scores
+# Assign specific estimators to the given scores
 
 def estimate_score(score):
     if score in (11111, 11121):

@@ -14,7 +14,7 @@ class AlgorithmModel:
 
     @classmethod
     def find_all(cls):
-        return mongo.db.suggested_algorithms.find()
+        return mongo.db.suggested_algorithms.find({})
 
     @classmethod
     def find_by_name(cls, name):

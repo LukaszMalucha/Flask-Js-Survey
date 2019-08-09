@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/results.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strings/en-gb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schemas/survey.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/survey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/survey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/add_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_request.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/estimator.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/estimator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/results.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

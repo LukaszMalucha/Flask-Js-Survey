@@ -31,10 +31,18 @@ api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 
-# Dashboard Blueprint
-from blueprints.dashboard.views import dashboard_blueprint
-app.register_blueprint(dashboard_blueprint)
 
+
+# Main View
+@app.route('/', methods=['GET', 'POST'])
+def dashboard():
+
+    return render_template('dashboard.html')
+
+# SciKit Map:
+@app.route('/map')
+def map():
+    return render_template('map.html')
 
 # Error Handlers
 @app.errorhandler(404)
