@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/schemas/survey.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/user-old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/survey.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/survey.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/add_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/estimator.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/estimator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/results.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,23 +75,23 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector\resources" />
+      <recent name="C:\Workshop\mlselector" />
+      <recent name="C:\Workshop\mlselector\schemas" />
+      <recent name="C:\Workshop\mlselector\models" />
+      <recent name="C:\Workshop\mlselector\libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector\templates" />
       <recent name="C:\Workshop\mlselector\resources" />
       <recent name="C:\Workshop\mlselector\libs" />
       <recent name="C:\Workshop\mlselector" />
       <recent name="C:\Workshop\mlselector\tests\unit" />
-      <recent name="D:\Workshop\mlselector\static\js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workshop\mlselector" />
-      <recent name="C:\Workshop\mlselector\schemas" />
-      <recent name="C:\Workshop\mlselector\resources" />
-      <recent name="C:\Workshop\mlselector\models" />
-      <recent name="C:\Workshop\mlselector\libs" />
     </key>
   </component>
   <component name="RunDashboard">
