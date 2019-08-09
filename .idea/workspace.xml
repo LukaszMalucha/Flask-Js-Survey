@@ -2,93 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blacklist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ma.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/confirmation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/confirmation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schemas/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/results.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strings/en-gb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/database.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/models/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/models/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/estimator.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/estimator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/templates/add_request.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/templates/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/tests_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/tests_score.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/project/dashboard/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/resources/user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/css/custom-styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/css/forms.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/css/navbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/img/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/img/creolabs-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/img/ml_map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/js/custom-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/static/js/forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/templates/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/templates/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/templates/user/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/templates/user/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/content.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/interaction.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/base_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/home_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/login_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/map_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/signup_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/locators/suggest_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/navigation.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/base_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/home_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/login_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/map_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/signup_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/page_model/suggest_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/steps/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/steps/content.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/steps/interactions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/steps/navigation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/acceptance/steps/waits.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/base_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/db_models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/db_models/test_mongo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/db_models/test_sqlite.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/system/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/views/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Dockerized/mlselector/web/tests/views/test_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user-old.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/estimator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/templates/add_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/templates/add_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/templates/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/templates/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/tests_score.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/algorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,23 +77,23 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/schemas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workshop\mlselector\schemas" />
-      <recent name="C:\Workshop\mlselector" />
-      <recent name="C:\Workshop\mlselector\resources" />
-      <recent name="C:\Workshop\mlselector\models" />
-      <recent name="C:\Workshop\mlselector\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workshop\mlselector\resources" />
       <recent name="C:\Workshop\mlselector\libs" />
       <recent name="C:\Workshop\mlselector" />
       <recent name="C:\Workshop\mlselector\tests\unit" />
       <recent name="D:\Workshop\mlselector\static\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector" />
+      <recent name="C:\Workshop\mlselector\schemas" />
+      <recent name="C:\Workshop\mlselector\resources" />
+      <recent name="C:\Workshop\mlselector\models" />
+      <recent name="C:\Workshop\mlselector\libs" />
     </key>
   </component>
   <component name="RunDashboard">

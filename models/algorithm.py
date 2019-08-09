@@ -15,3 +15,16 @@ class AlgorithmModel:
     @classmethod
     def find_all(cls):
         return mongo.db.suggested_algorithms.find()
+
+    @classmethod
+    def find_by_name(cls, name):
+        return mongo.db.suggested_algorithms.find_one({'algorithm': name})
+
+
+# {
+#     "_id": {
+#         "$oid": "5d0948ab4506d900047d4201"
+#     },
+#     "algorithm": "test", !!!!!!!!!!!!!!!!!!!!!!!!!!! ZAMIENIC NA NAME
+#     "description": "test"
+# }
