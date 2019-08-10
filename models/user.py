@@ -37,13 +37,14 @@ class UserModel(UserMixin, db.Model):
     def find_by_id(cls, _id):
         return cls.query.filter_by(id=_id).first()
 
-    def send_confirmation_email(self) -> Response:
+    def send_confirmation_email(self):
         # remove end slash from http://127.0.0.1:5000 + /user_confirm/1
         link = request.url_root[:-1] + url_for("confirmation", confirmation_id=self.most_recent_confirmation.id)
         subject = "Registration confirmation"
         text = f"Please click the link to confirm your registration: {link}"
         html = f'<html>Please click the link to confirm your registration: <a href="{link}">{link}</a></html>'
         return Mailgun.send_email([self.email], subject, text, html)
+        # return [[self.email], subject, text, html]
 
     def save_to_db(self) -> None:
         db.session.add(self)

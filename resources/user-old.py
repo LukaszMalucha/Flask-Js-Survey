@@ -4,7 +4,10 @@ from flask_restful import Resource
 from models.user import UserModel
 from libs.forms import RegisterForm, LoginForm
 from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
+from schemas.user import UserSchema
+from libs.strings import gettext
 
+user_schema = UserSchema()
 login_manager = LoginManager()
 
 
@@ -23,17 +26,22 @@ login_manager.anonymous_user = Anonymous
 
 class UserRegister(Resource):
 
-    def get(self):
+    @classmethod
+    def get(cls):
         """Register User function"""
         form = RegisterForm()
         return Response(render_template('user/register.html', form=form))  # passing signup form to signup template
 
-    def post(self):
+    @classmethod
+    def post(cls):
         form = RegisterForm()
         if form.validate_on_submit():
-            if UserModel.find_by_email(form.email.data) or UserModel.find_by_username(form.username.data):
-                flash(f'User already exist', 'alert alert-danger')
-                return Response(render_template('user/register.html', form=form))
+            if UserModel.find_by_email(form.email.data):
+                resp = {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger'}
+                return Response(render_template('user/register.html', form=form, resp = resp))
+
+            if UserModel.find_by_username(form.username.data):
+                resp = {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger'}
 
             hashed_password = generate_password_hash(form.password.data,
                                                      method='sha256')  ## password get hashed for security purposes
@@ -47,13 +55,15 @@ class UserRegister(Resource):
 
 class UserLogin(Resource):
 
-    def get(self):
+    @classmethod
+    def get(cls):
         form = LoginForm()
 
         # alert alert-success
         return Response(render_template('user/login.html', form=form))  ## passing login form to login template
 
-    def post(self):
+    @classmethod
+    def post(cls):
         form = LoginForm()
 
         if form.validate_on_submit():  ## if form was submitted....
@@ -72,6 +82,25 @@ class UserLogin(Resource):
 
 class UserLogout(Resource):
 
-    def get(self):
+    @classmethod
+    def get(cls):
         logout_user()
         return redirect("login")
+
+
+class User(Resource):
+
+    @classmethod
+    def get(cls, user_id: int):
+        user = UserModel.find_by_id(user_id)
+        if not user:
+            return {'message': gettext("user_not_found")}, 404
+        return user_schema.dump(user), 200
+
+    @classmethod
+    def delete(cls, user_id: int):
+        user = UserModel.find_by_id(user_id)
+        if not user:
+            return {'message': gettext("user_not_found")}, 404
+        user.delete_from_db()
+        return {'message': gettext("user_deleted")}, 200

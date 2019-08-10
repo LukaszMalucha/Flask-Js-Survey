@@ -21,7 +21,7 @@ class ConfirmationModel(db.Model):
         self.confirmed = False
 
     @classmethod
-    def find_by_id(cls, _id:str) -> "ConfirmationModel":
+    def find_by_id(cls, _id):
         return cls.query.filter_by(id=_id).first()
 
     @property

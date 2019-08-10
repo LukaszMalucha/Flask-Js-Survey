@@ -1,12 +1,16 @@
 import os
+
+from marshmallow import ValidationError
+
 import env
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
 from flask_pymongo import PyMongo
 from flask_restful import Api
 
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
+from resources.confirmation import Confirmation, ConfirmationByUser
 
 # Settings
 app = Flask(__name__)
@@ -30,6 +34,8 @@ mongo = PyMongo(app)
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
+api.add_resource(Confirmation, '/user_confirmation/<string:confirmation_id>')
+api.add_resource(ConfirmationByUser, '/confirmation/user/<int:user_id>')
 
 
 
@@ -53,6 +59,10 @@ def error404(error):
 @app.errorhandler(500)
 def error500(error):
     return render_template('500.html')
+
+@app.errorhandler(ValidationError)
+def handle_marshmallow_validation(error):
+    return jsonify(error.messages), 400
 
 
 ## APP INITIATION

@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/user-old.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/user-new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/confirmation_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard-old.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/mailgun.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/mailgun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/confirmation.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/confirmation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/user-old.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user-old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_request.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,50 +35,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>40px</find>
-      <find>top:</find>
-      <find>#314a60</find>
-      <find>#102332</find>
-      <find>#navi</find>
-      <find>#navigat</find>
-      <find>visit</find>
-      <find>size</find>
-      <find>main_Card</find>
-      <find>#main_card</find>
-      <find>h2</find>
-      <find>#add</find>
-      <find>quest</find>
-      <find>ff</find>
-      <find>dashboard-card</find>
-      <find>margin-lef</find>
-      <find>height</find>
-      <find>form-card</find>
-      <find>row-cards</find>
-      <find>btn-card</find>
-      <find>forms</find>
-      <find>img</find>
-      <find>chromedriver</find>
-      <find>dropdown_link</find>
-      <find>delete</find>
-      <find>form-signin</find>
-      <find>SuggestPageLocators</find>
-      <find>suggested_algorithm</find>
-      <find>btn</find>
-      <find>butt</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>AddAlgorithmPage</replace>
-      <replace>font-size: 13px;</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>D:\Workshop\mlselector\tests</dir>
-      <dir>D:\Workshop\mlselector</dir>
-      <dir>C:\Workshop\mlselector</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -73,25 +43,26 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector" />
+      <recent name="C:\Workshop\mlselector\templates" />
+      <recent name="C:\Workshop\mlselector\resources" />
+      <recent name="C:\Workshop\mlselector\libs" />
+      <recent name="C:\Workshop\mlselector\tests\unit" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector\templates" />
       <recent name="C:\Workshop\mlselector\resources" />
       <recent name="C:\Workshop\mlselector" />
       <recent name="C:\Workshop\mlselector\schemas" />
       <recent name="C:\Workshop\mlselector\models" />
-      <recent name="C:\Workshop\mlselector\libs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Workshop\mlselector\templates" />
-      <recent name="C:\Workshop\mlselector\resources" />
-      <recent name="C:\Workshop\mlselector\libs" />
-      <recent name="C:\Workshop\mlselector" />
-      <recent name="C:\Workshop\mlselector\tests\unit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -289,5 +260,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

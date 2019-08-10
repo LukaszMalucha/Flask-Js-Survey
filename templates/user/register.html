@@ -24,7 +24,11 @@
         </div>
 
 <div class="container">
-
+    <h5 style="color:white">{{users}}</h5>
+    <h5 style="color:white">{{conf}}</h5>
+    {% if message %}
+    <h5 style="color:white">{{message}}</h5>
+    {% endif %}
     <form class="form-signin" method="POST" id="form-register" action="{{ url_for('userregister') }}">
         <i class="material-icons" id="icon-login">assignment_turned_in</i>
         <fieldset class="form-box">
