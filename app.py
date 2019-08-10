@@ -10,7 +10,7 @@ from flask_pymongo import PyMongo
 from flask_restful import Api
 
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
-from resources.confirmation import Confirmation, ConfirmationByUser
+from resources.confirmation import Confirmation, ConfirmationEmail
 
 # Settings
 app = Flask(__name__)
@@ -34,21 +34,21 @@ mongo = PyMongo(app)
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
+api.add_resource(ConfirmationEmail, '/confirmation_email/<string:confirmation_id>')
 api.add_resource(Confirmation, '/user_confirmation/<string:confirmation_id>')
-api.add_resource(ConfirmationByUser, '/confirmation/user/<int:user_id>')
-
 
 
 # Main View
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
-
     return render_template('dashboard.html')
+
 
 # SciKit Map:
 @app.route('/map')
 def map():
     return render_template('map.html')
+
 
 # Error Handlers
 @app.errorhandler(404)
@@ -59,6 +59,7 @@ def error404(error):
 @app.errorhandler(500)
 def error500(error):
     return render_template('500.html')
+
 
 @app.errorhandler(ValidationError)
 def handle_marshmallow_validation(error):

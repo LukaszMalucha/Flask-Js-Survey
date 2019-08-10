@@ -15,11 +15,6 @@
   "algorithm_not_found": "algorithm not found.",
   "algorithm_deleted": "algorithm deleted.",
 
-  "store_name_exists": "A store with name '{}' already exists.",
-  "store_error_inserting": "An error occurred while inserting the store.",
-  "store_not_found": "Store not found.",
-  "store_deleted": "Store deleted.",
-
   "user_username_exists": "A user with that username already exists.",
   "user_email_exists": "A user with that email already exists.",
   "user_not_found": "User not found.",

@@ -25,7 +25,9 @@
 
 <div class="container">
     <h5 style="color:white">{{users}}</h5>
-    <h5 style="color:white">{{conf}}</h5>
+    {% for element in conf %}
+    <h5 style="color:white">{{element}}</h5>
+    {% endfor %}
     {% if message %}
     <h5 style="color:white">{{message}}</h5>
     {% endif %}

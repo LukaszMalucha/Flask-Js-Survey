@@ -1,9 +1,8 @@
-from flask import session, Response, render_template, redirect, flash
+from flask import session, Response, render_template, redirect, flash, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
 from libs.forms import RegisterForm, LoginForm
-from libs.mailgun import MailGunException
 from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
 from schemas.user import UserSchema
 from models.confirmation import ConfirmationModel
@@ -54,18 +53,16 @@ class UserRegister(Resource):
                 new_user.save_to_db()
                 confirmation = ConfirmationModel(new_user.id)
                 confirmation.save_to_db()
-                new_user.send_confirmation_email()
+                # new_user.send_confirmation_email()
                 # login_user(new_user)
-
-                return redirect("login")
+                conf = str(confirmation.id)
+                # return Response(render_template('user/confirmation_page.html', email='asd'))
+                return redirect(url_for("confirmationemail", confirmation_id = conf))
             except:
                 new_user.delete_from_db()
                 return {"message": gettext("user_error_creating")}, 500
 
-        return Response(render_template('user/register.html', form=form))  ## passing signup form to signup template
-
-
-
+        return Response(render_template('user/register.html', form=form))  # passing signup form to signup template
 
 
 class UserLogin(Resource):
