@@ -12,7 +12,6 @@ $(document).ready(function() {
     $('.sidenav').sidenav();
 
     $('.delete-button').on('click', function(){
-        console.log("asdasd")
 
          var algorithm_id = $(this).attr('algorithm_id');
 

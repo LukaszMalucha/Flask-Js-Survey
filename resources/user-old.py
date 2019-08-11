@@ -1,4 +1,4 @@
-from flask import session, Response, render_template, redirect, flash, url_for, request
+from flask import session, Response, render_template, redirect, flash, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
@@ -30,36 +30,39 @@ class UserRegister(Resource):
     @classmethod
     def get(cls):
         """Register User function"""
+        form = RegisterForm()
         users = UserModel.find_by_id(1)
         conf = ConfirmationModel.query.all()
         #  passing signup form to signup template
-        return Response(render_template('user/register.html',  users=users, conf=conf))
+        return Response(render_template('user/register.html', form=form, users=users, conf=conf))
 
     @classmethod
     def post(cls):
-        user = request.get_json()
-        if UserModel.find_by_email(user['email']):
-            return {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger'}
-        #
-        if UserModel.find_by_username(user['username']):
-            return {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger'}
+        form = RegisterForm()
+        if form.validate_on_submit():
+            if UserModel.find_by_email(form.email.data):
+                return {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger'}, 400
 
-        if user['password'] != user['confirm']:
-            return {'message': gettext("user_password_mismatch"), 'alert': 'alert alert-danger'}
+            if UserModel.find_by_username(form.username.data):
+                return {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger'}, 400
 
-        hashed_password = generate_password_hash(user['password'],
-                                                 method='sha256')  # password get hashed for security purposes
-        new_user = UserModel(email=user['email'], username=user['username'], password=hashed_password)
-        try:
-            new_user.save_to_db()
-            confirmation = ConfirmationModel(new_user.id)
-            confirmation.save_to_db()
-            confirmation_id = confirmation.id
-            # login_user(new_user)
-            return {'confirmation': confirmation_id}
-        except:
-            new_user.delete_from_db()
-            return {"message": gettext("user_error_creating")}, 500
+            hashed_password = generate_password_hash(form.password.data,
+                                                     method='sha256')  ## password get hashed for security purposes
+            new_user = UserModel(email=form.email.data, username=form.username.data, password=hashed_password)
+            try:
+                new_user.save_to_db()
+                confirmation = ConfirmationModel(new_user.id)
+                confirmation.save_to_db()
+                # new_user.send_confirmation_email()
+                # login_user(new_user)
+                conf = str(confirmation.id)
+                # return Response(render_template('user/confirmation_page.html', email='asd'))
+                return redirect(url_for("confirmationemail", confirmation_id=conf))
+            except:
+                new_user.delete_from_db()
+                return {"message": gettext("user_error_creating")}, 500
+
+        return Response(render_template('user/register.html', form=form))  # passing signup form to signup template
 
 
 class UserLogin(Resource):

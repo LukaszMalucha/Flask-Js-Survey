@@ -5,6 +5,7 @@
 {% block extrahead %}
 
 <link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
+<script src="{{url_for('static', filename='js/users.js')}}"></script>
 {% endblock %}
 {% block content %}
 <div class="row row-alert" style="min-height: 72px">
@@ -31,10 +32,9 @@
     {% if message %}
     <h5 style="color:white">{{message}}</h5>
     {% endif %}
-    <form class="form-signin" method="POST" id="form-register" action="{{ url_for('userregister') }}">
+    <form class="form-signin" method="POST" id="formRegister">
         <i class="material-icons" id="icon-login">assignment_turned_in</i>
         <fieldset class="form-box">
-            {{ form.hidden_tag() }}
             <div class="row text-center">
                 <h4>Register User</h4>
             </div>
@@ -43,7 +43,7 @@
                     <h6>Your Email Address:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.email)}}
+                    <input class="form-control" id="email" name="email" required="" type="text" value="">
                 </div>
             </div>
             <div class="row plain-element">
@@ -51,7 +51,7 @@
                     <h6>Your Username:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.username)}}
+                    <input class="form-control" id="username" name="username" required="" type="text" value="">
                 </div>
             </div>
             <div class="row plain-element">
@@ -59,7 +59,7 @@
                     <h6>Your Password:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.password)}}
+                    <input class="form-control" id="password" name="password" required="" type="password" value="">
                 </div>
             </div>
             <div class="row plain-element">
@@ -67,11 +67,11 @@
                     <h6>Confirm Password:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.confirm)}}
+                    <input class="form-control" id="confirm" name="confirm" type="password" value="">
                 </div>
             </div>
 
-            <button type="submit" class="btn-login"><span>Continue <i
+            <button type="submit" class="btn-login" id="registerUser"><span>Continue <i
                     class="far fa-arrow-alt-circle-right"></i></span>
             </button>
         </fieldset>

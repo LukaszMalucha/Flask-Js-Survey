@@ -8,6 +8,19 @@
 {% endblock %}
 {% block content %}
 <div class="row row-alert" style="min-height: 72px">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+    {% for category, message in messages %}
+    <div class="{{ category }}">
+        <div class="messages text-center">
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+    {% endwith %}
 </div>
 
 
