@@ -11,21 +11,22 @@ class Confirmation(Resource):
     @classmethod
     def get(cls, confirmation_id):
         """Return confrimation HTML page."""
-        confirmation = ConfirmationModel.find_by_id(confirmation_id)
-        if not confirmation:
-            return {"message": gettext("confirmation_not_found")}, 404
+        # confirmation = ConfirmationModel.find_by_id(confirmation_id)
+        # if not confirmation:
+            # return {"message": gettext("confirmation_not_found")}, 404
 
-        if confirmation.expired:
-            return {"message": gettext("confirmation_link_expired")}, 404
 
-        if confirmation.confirmed:
-            return {"message": gettext("confirmation_already_confirmed")}, 404
+        # if confirmation.expired:
+        #     return {"message": gettext("confirmation_link_expired")}, 404
+        #
+        # if confirmation.confirmed:
+        #     return {"message": gettext("confirmation_already_confirmed")}, 404
 
-        confirmation.confirmed = True
-        confirmation.save_to_db()
-
-        headers = {"Content-Type": "text/html"}
-        return make_response(render_template("user/confirmation_page.html", email=confirmation.user.email), 200, headers)
+        # confirmation.confirmed = True
+        # confirmation.save_to_db()
+        #
+        # headers = {"Content-Type": "text/html"}
+        return make_response(render_template("user/confirmation_page.html", email="asd.com"), 200)
 
 
 class ConfirmationEmail(Resource):

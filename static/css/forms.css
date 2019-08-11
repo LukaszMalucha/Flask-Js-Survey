@@ -58,8 +58,8 @@ body {
 
 }
 
-.row-confirmation {
-    padding: 2% 2% 4% 2%;
+.row-confirmation h5{
+    color: #ffffff;
 
 }
 
@@ -74,6 +74,9 @@ body {
     font-size: 1.2rem;
 }
 
+.golden {
+    color: #FFCB9A;
+}
 
 .field-description {
     text-align: right;

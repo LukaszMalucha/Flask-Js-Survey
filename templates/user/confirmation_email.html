@@ -8,31 +8,18 @@
 {% endblock %}
 {% block content %}
 <div class="row row-alert" style="min-height: 72px">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-
-    {% for category, message in messages %}
-    <div class="{{ category }}">
-        <div class="messages text-center">
-            {{ message }}
-        </div>
-    </div>
-    {% endfor %}
-
-    {% endif %}
-    {% endwith %}
 </div>
 
 
 <div class="container">
-    <form class="form-signin">
+    <div class="form-signin">
         <div class="row row-confirmation">
             <p>Please click the link below to confirm registration</p>
 
           <br>
           <a href="{{link}}">Confirm Registration</a>
         </div>
-
-    </form>
+        <div class="row"></div>
+    </div>
 </div>
 {% endblock %}

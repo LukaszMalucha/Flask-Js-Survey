@@ -1,24 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration Confirmation</title>
-    <link href="{{url_for('static', filename='confirmation_page.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
-  <div class="container-fluid">
-    <div class="jumbotron text-center full-height">
-      <h1>Thank You</h1>
-      <p><em>Your registration has been confirmed through < {{ email }} >.</em></p>
+
+{% block extrahead %}
+
+<link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
+{% endblock %}
+{% block content %}
+<div class="row row-alert" style="min-height: 72px">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+    {% for category, message in messages %}
+    <div class="{{ category }}">
+        <div class="messages text-center">
+            {{ message }}
+        </div>
     </div>
+    {% endfor %}
 
-    <footer class="text-center">
-      <hr>
-      <p><a href="" target="_blank">Confirm Page</a></p>
-    </footer>
-  </div>
+    {% endif %}
+    {% endwith %}
+</div>
 
-</body>
-</html>
+
+<div class="container">
+    <div class="form-signin">
+        <div class="row row-confirmation">
+
+            <h5>Thank You</h5>
+            <br>
+            <p>Your registration has been confirmed through <b class="golden">{{ email }}</b>.</p>
+
+            <br><br>
+
+            <button type="submit" class="btn-login" onclick="window.location='{{url_for('dashboard')}}'"><span>Main Page <i
+                    class="far fa-arrow-alt-circle-right"></i></span>
+            </button>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
