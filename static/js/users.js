@@ -15,7 +15,8 @@ $(document).ready(function() {
         })
         .done(function(data){
             console.log(data);
-//            window.location.href = "/confirmation_email/"
+            var confirmation = data.confirmation
+            window.location.href = "/confirmation_email/" + confirmation
 
 
 
