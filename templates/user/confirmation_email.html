@@ -5,6 +5,7 @@
 {% block extrahead %}
 
 <link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
+<script src="{{url_for('static', filename='js/user.js')}}"></script>
 {% endblock %}
 {% block content %}
 <div class="row row-alert" style="min-height: 72px">
@@ -23,14 +24,14 @@
     {% endwith %}
 </div>
 
-
+<h6>{{conf}}</h6>
 <div class="container">
     <div class="form-signin">
         <div class="row row-confirmation">
             <p>Please click the link below to confirm registration</p>
 
           <br>
-          <a href="{{link}}">Confirm Registration</a>
+          <a value="{{link}}" id="confirmationLink">Confirm Registration</a>
         </div>
         <div class="row"></div>
     </div>

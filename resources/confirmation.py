@@ -33,7 +33,8 @@ class Confirmation(Resource):
 class ConfirmationEmail(Resource):
     @classmethod
     def get(cls, confirmation_id):
+        conf = ConfirmationModel.find_by_id(confirmation_id)
         link = request.url_root[:-1] + url_for("confirmation", confirmation_id=confirmation_id)
-        return make_response(render_template("user/confirmation_email.html", link=link, confirmation_id=confirmation_id))
+        return make_response(render_template("user/confirmation_email.html", link=link, confirmation_id=confirmation_id, conf=conf))
 
 

@@ -326,7 +326,7 @@ nav ul li:hover, nav ul li:active {
 
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     .top-navbar .navbar-right {
         position: relative;
         top: -60px;

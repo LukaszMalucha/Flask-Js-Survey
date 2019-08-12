@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/confirmation.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/confirmation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/confirmation_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/confirmation_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -4,10 +4,9 @@ from flask import request, url_for, render_template
 from requests import Response
 from models.confirmation import ConfirmationModel
 from db import db
-from flask_login import UserMixin
 
 
-class UserModel(UserMixin, db.Model):
+class UserModel(db.Model):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
