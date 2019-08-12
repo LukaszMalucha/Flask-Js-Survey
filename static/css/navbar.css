@@ -326,6 +326,15 @@ nav ul li:hover, nav ul li:active {
 
 }
 
+@media(max-width:767px) {
+    .top-navbar .navbar-right {
+        position: relative;
+        top: -60px;
+    }
+
+}
+
+
 
 @media(max-width:415px) {
 
@@ -342,12 +351,10 @@ nav ul li:hover, nav ul li:active {
 
     }
 
-    .top-navbar .navbar-right {
-        position: relative;
-        top: -60px;
-    }
+
 
 
 }
+
 
 
