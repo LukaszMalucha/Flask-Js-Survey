@@ -39,13 +39,19 @@ class UserRegister(Resource):
     def post(cls):
         user = request.get_json()
         if UserModel.find_by_email(user['email']):
-            return {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger'}
-        #
+            return {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger', 'status': 400}
+
+        if "@" not in user['email']:
+            return {'message': gettext("user_email_incorrect"), 'alert': 'alert alert-danger', 'status': 400}
+
         if UserModel.find_by_username(user['username']):
-            return {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger'}
+            return {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger', 'status': 400}
 
         if user['password'] != user['confirm']:
-            return {'message': gettext("user_password_mismatch"), 'alert': 'alert alert-danger'}
+            return {'message': gettext("user_password_mismatch"), 'alert': 'alert alert-danger', 'status': 400}
+
+        if len(user['password']) < 6:
+            return {'message': gettext("user_password_too_short"), 'alert': 'alert alert-danger', 'status': 400}
 
         hashed_password = generate_password_hash(user['password'],
                                                  method='sha256')  # password get hashed for security purposes
@@ -56,10 +62,10 @@ class UserRegister(Resource):
             confirmation.save_to_db()
             confirmation_id = confirmation.id
             # login_user(new_user)
-            return {'confirmation': confirmation_id}
+            return {'confirmation': confirmation_id, 'status': 200}
         except:
             new_user.delete_from_db()
-            return {"message": gettext("user_error_creating")}, 500
+            return {"message": gettext("user_error_creating"), 'status': 500}
 
 
 class UserLogin(Resource):

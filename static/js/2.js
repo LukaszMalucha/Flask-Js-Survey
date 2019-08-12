@@ -13,9 +13,17 @@ $(document).ready(function() {
             })
         })
         .done(function(data){
-            console.log(data);
-            var confirmation = data.confirmation
-            window.location.href = "/confirmation_email/" + confirmation
+            console.log(data.status);
+            if (data.status > 299) {
+                console.log('error');
+                $('#messageError').text(data.message).show();
+            }
+
+            else {
+                console.log('zxc');
+            }
+//            var confirmation = data.confirmation
+//            window.location.href = "/confirmation_email/" + confirmation
         });
         event.preventDefault();
     });

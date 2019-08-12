@@ -5,33 +5,20 @@
 {% block extrahead %}
 
 <link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
-<script src="{{url_for('static', filename='js/user.js')}}"></script>
+<script src="{{url_for('static', filename='js/2.js')}}"></script>
 {% endblock %}
 {% block content %}
-<div class="row row-alert" style="min-height: 72px">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
 
-    {% for category, message in messages %}
-    <div class="{{ category }}">
-        <div class="messages text-center">
-            {{ message }}
-        </div>
+<div class="row header">
+    <h6>aasdasd</h6>
+    <div id="messageAlert" class="alert alert-message" role="alert">
     </div>
-    {% endfor %}
+    <div id="messageError" class="alert alert-message" role="alert">
 
-    {% endif %}
-    {% endwith %}
+    </div>
 </div>
 
 <div class="container">
-    <h5 style="color:white">{{users}}</h5>
-    {% for element in conf %}
-    <h5 style="color:white">{{element}}</h5>
-    {% endfor %}
-    {% if message %}
-    <h5 style="color:white">{{message}}</h5>
-    {% endif %}
     <form class="form-signin" method="POST" id="formRegister">
         <i class="material-icons" id="icon-login">assignment_turned_in</i>
         <fieldset class="form-box">
@@ -43,7 +30,7 @@
                     <h6>Your Email Address:</h6>
                 </div>
                 <div class="input-field col s6">
-                    <input class="form-control" id="email" name="email" required="" type="text" value="">
+                    <input class="form-control" id="email" name="email" required="" type="text" value="" maxlength="50">
                 </div>
             </div>
             <div class="row plain-element">
@@ -51,7 +38,7 @@
                     <h6>Your Username:</h6>
                 </div>
                 <div class="input-field col s6">
-                    <input class="form-control" id="username" name="username" required="" type="text" value="">
+                    <input class="form-control" id="username" name="username" required="" type="text" value=""  maxlength="80">
                 </div>
             </div>
             <div class="row plain-element">
@@ -59,7 +46,7 @@
                     <h6>Your Password:</h6>
                 </div>
                 <div class="input-field col s6">
-                    <input class="form-control" id="password" name="password" required="" type="password" value="">
+                    <input class="form-control" id="password" name="password" required="" type="password" value=""  maxlength="80">
                 </div>
             </div>
             <div class="row plain-element">
@@ -67,7 +54,7 @@
                     <h6>Confirm Password:</h6>
                 </div>
                 <div class="input-field col s6">
-                    <input class="form-control" id="confirm" name="confirm" type="password" value="">
+                    <input class="form-control" id="confirm" name="confirm" type="password" value=""  maxlength="80">
                 </div>
             </div>
 
