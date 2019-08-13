@@ -39,19 +39,19 @@ class UserRegister(Resource):
     def post(cls):
         user = request.get_json()
         if UserModel.find_by_email(user['email']):
-            return {'message': gettext("user_email_exists"), 'alert': 'alert alert-danger', 'status': 400}
+            return {'message': gettext("user_email_exists"), 'status': 400}
 
         if "@" not in user['email']:
-            return {'message': gettext("user_email_incorrect"), 'alert': 'alert alert-danger', 'status': 400}
+            return {'message': gettext("user_email_incorrect"), 'status': 400}
 
         if UserModel.find_by_username(user['username']):
-            return {'message': gettext("user_username_exists"), 'alert': 'alert alert-danger', 'status': 400}
+            return {'message': gettext("user_username_exists"), 'status': 400}
 
         if user['password'] != user['confirm']:
-            return {'message': gettext("user_password_mismatch"), 'alert': 'alert alert-danger', 'status': 400}
+            return {'message': gettext("user_password_mismatch"), 'status': 400}
 
         if len(user['password']) < 6:
-            return {'message': gettext("user_password_too_short"), 'alert': 'alert alert-danger', 'status': 400}
+            return {'message': gettext("user_password_too_short"), 'status': 400}
 
         hashed_password = generate_password_hash(user['password'],
                                                  method='sha256')  # password get hashed for security purposes
@@ -75,13 +75,13 @@ class UserLogin(Resource):
         form = LoginForm()
 
         # alert alert-success
-        return Response(render_template('user/login.html', form=form))  ## passing login form to login template
+        return Response(render_template('user/login.html', form=form))  # passing login form to login template
 
     @classmethod
     def post(cls):
         form = LoginForm()
 
-        if form.validate_on_submit():  ## if form was submitted....
+        if form.validate_on_submit():  # if form was submitted....
             user = UserModel.find_by_email(email=form.email.data)
             if user:
                 if check_password_hash(user.password, form.password.data):

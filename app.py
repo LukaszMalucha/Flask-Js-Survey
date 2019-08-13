@@ -10,7 +10,7 @@ from flask_pymongo import PyMongo
 from flask_restful import Api
 
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
-from resources.confirmation import Confirmation, ConfirmationEmail
+from resources.confirmation import Confirmation
 
 # Settings
 app = Flask(__name__)
@@ -34,7 +34,6 @@ mongo = PyMongo(app)
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
-api.add_resource(ConfirmationEmail, '/confirmation_email/<string:confirmation_id>')
 api.add_resource(Confirmation, '/user_confirmation/<string:confirmation_id>')
 
 

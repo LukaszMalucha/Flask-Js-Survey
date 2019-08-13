@@ -102,18 +102,17 @@ label {
 
 }
 
-.alert-message {
-    background: #373d49;
-    color: #FFCB9A;
+.alert-danger{
     text-align: center;
     font-size: 1rem;
-    position: absolute;
     width: 100%;
-    padding: 2px;
+    padding: 6px;
+    display: none;
 }
 
 #messageError {
-    color: red;
+
+
 }
 
 

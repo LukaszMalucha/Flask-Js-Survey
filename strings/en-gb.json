@@ -6,6 +6,7 @@
   "confirmation_not_found": "Confirmation not found.",
   "confirmation_link_expired": "Confirmation link already expired.",
   "confirmation_already_confirmed": "User registration already confirmed.",
+  "confirmation_confirm_error": "Internal server error. Registration could not be confirmed at this time.",
   "confirmation_resend_fail": "Internal server error. Failed to resend confirmation email.",
   "confirmation_resend_successful": "E-mail confirmation successfully re-sent.",
 
