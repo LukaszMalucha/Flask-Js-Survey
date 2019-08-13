@@ -15,8 +15,9 @@ $(document).ready(function() {
         .done(function(data){
             console.log(data.status);
             if (data.status > 299) {
-                console.log('error');
-                $('#messageError').text(data.message).show();
+                console.log('erS');
+                $('#messageError').text('ALERT').show().fadeOut(3000);
+
             }
 
             else {

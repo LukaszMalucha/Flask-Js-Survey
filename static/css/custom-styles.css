@@ -31,7 +31,6 @@ html {
     overflow: auto;
     position: relative;
     top: 42px;
-    padding-top: 100px;
     display: block;
 }
 
@@ -98,15 +97,25 @@ label {
 }
 
 .header {
-    position: absolute;
-    z-index: 500;
+    position:fixed;
     width: 100%;
-    height: 50px;
-    top: 0px;
-    background: red;
-    text-align: center;
 
 }
+
+.alert-message {
+    background: #373d49;
+    color: #FFCB9A;
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    padding: 2px;
+}
+
+#messageError {
+    color: red;
+}
+
 
 /*------------------------------------------------------------------------------
     ROWS
