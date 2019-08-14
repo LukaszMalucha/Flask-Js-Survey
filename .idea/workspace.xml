@@ -6,12 +6,10 @@
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/confirmation.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/confirmation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/custom-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/user-old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strings/en-gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/strings/en-gb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/confirmation_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/confirmation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
