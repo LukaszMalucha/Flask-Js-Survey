@@ -96,10 +96,12 @@
 
         <div id="messageError" class="alert alert-danger" role="alert">
         </div>
+        {% if message_success %}
         <div id="messageSuccess" class="alert alert-success" role="alert">
+            {{ message_success }}
         </div>
+        {% endif %}
     </div>
-
         {% block content %} {% endblock %}
 
     </div>

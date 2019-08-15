@@ -103,7 +103,8 @@ label {
     font-size: 1rem;
     width: 100%;
     padding: 6px;
-    display: none;
+    border-radius: 0px;
+
 }
 
 .alert-success {
@@ -111,6 +112,7 @@ label {
     font-size: 1rem;
     width: 100%;
     padding: 6px;
+    border-radius: 0px;
 
 }
 

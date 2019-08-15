@@ -4,7 +4,7 @@ from marshmallow import ValidationError
 
 import env
 
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, session
 from flask_bootstrap import Bootstrap
 from flask_pymongo import PyMongo
 from flask_restful import Api
@@ -40,7 +40,9 @@ api.add_resource(Confirm, '/confirm')
 # Main View
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
-    return render_template('dashboard.html')
+
+    message_success = session.get('message_success', None)
+    return render_template('dashboard.html', message_success=message_success)
 
 
 # SciKit Map:
