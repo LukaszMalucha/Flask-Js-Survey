@@ -49,8 +49,9 @@ $(document).ready(function() {
             }
 
             else if (data.status == 200){
-                $('#messageError').text(data.message).show().fadeOut(5000);
-                window.location.href = "/"
+                $('#messageSuccess').text(data.message).show().fadeOut(5000);
+                window.location.href = "/";
+                console.log(data)
             }
         });
     event.preventDefault();

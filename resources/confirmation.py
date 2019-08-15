@@ -8,8 +8,10 @@ class ConfirmationPage(Resource):
     @classmethod
     def get(cls, confirmation_id):
         link = request.url_root[:-1] + url_for("confirmationpage", confirmation_id=confirmation_id)
-        return Response(render_template('user/confirmation.html', confirmation_id=confirmation_id, link=link))
-
+        confirmation = ConfirmationModel.find_by_id(confirmation_id)
+        email = confirmation.user.email
+        return Response(
+            render_template('user/confirmation.html', confirmation_id=confirmation_id, link=link, email=email))
 
 
 class Confirm(Resource):

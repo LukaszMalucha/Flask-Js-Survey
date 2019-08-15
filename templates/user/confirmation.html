@@ -5,30 +5,14 @@
 {% block extrahead %}
 
 <link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
-<script src="{{url_for('static', filename='js/7.js')}}"></script>
+<script src="{{url_for('static', filename='js/1.js')}}"></script>
 {% endblock %}
 {% block content %}
-<div class="row row-alert" style="min-height: 72px">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
 
-    {% for category, message in messages %}
-    <div class="{{ category }}">
-        <div class="messages text-center">
-            {{ message }}
-        </div>
-    </div>
-    {% endfor %}
-
-    {% endif %}
-    {% endwith %}
-</div>
-
-<h6>{{conf}}</h6>
 <div class="container">
     <div class="form-signin">
         <div class="row row-confirmation">
-            <p>Please click the link below to confirm registration</p>
+            <p>Please click the link below to confirm registration for {{ email }}.</p>
 
           <br>
           <a href="" confirmation="{{confirmation_id}}" value="{{link}}" id="confirmationLink">Confirm Registration</a>

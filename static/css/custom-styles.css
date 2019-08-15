@@ -86,10 +86,6 @@ label {
    margin-bottom: 10px;
 }
 
-#error {
-    color: red;
-    display:none;
-}
 
 .img-map {
     border-top-left-radius: 10px;
@@ -110,8 +106,11 @@ label {
     display: none;
 }
 
-#messageError {
-
+.alert-success {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    padding: 6px;
 
 }
 

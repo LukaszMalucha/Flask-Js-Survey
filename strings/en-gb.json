@@ -28,7 +28,7 @@
   "user_logged_out": "User <id={user_id}> successfully logged out.",
   "user_not_confirmed": "You have not confirmed registration, please check your email <{}>.",
   "user_error_creating": "Internal server error. Failed to create user.",
-  "user_registered": "Account created successfully. An email with the activation link has been sent.",
+  "user_registered": "Thank you. Your registration has been confirmed through {}.",
 
   "image_uploaded": "Image '{}' has been successfully uploaded.",
   "image_illegal_extension": "Extension '{}' is not allowed.",
