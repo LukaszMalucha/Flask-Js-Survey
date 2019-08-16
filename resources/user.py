@@ -85,12 +85,13 @@ class UserLogin(Resource):
             user = UserModel.find_by_email(email=form.email.data)
             if user:
                 if check_password_hash(user.password, form.password.data):
-                    session['current_user'] = user.email
-                    flash(f'You have successfully logged in as {user.email}', 'alert alert-success')
+                    # session['current_user'] = user.email
+                    # flash(f'You have successfully logged in as {user.email}', 'alert alert-success')
                     login_user(user)
                     return redirect("/")
             else:
                 flash(u'Invalid Email or Password provided', 'alert alert-danger')
+            return {'user' : user}
 
         return Response(render_template('user/login.html', form=form))
 

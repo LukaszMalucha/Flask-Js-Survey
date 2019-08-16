@@ -1,19 +1,17 @@
 import os
 import env
-from flask import request, url_for, render_template
-from requests import Response
 from models.confirmation import ConfirmationModel
+from flask_login import UserMixin
 from db import db
 
 
-class UserModel(db.Model):
+class UserModel(UserMixin, db.Model ):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(50), nullable=False, unique=True)
     username = db.Column(db.String(80), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
-    is_active = db.Column(db.Boolean, default=False, nullable=False)
 
     confirmation = db.relationship("ConfirmationModel",
                                    lazy="dynamic",  # allows attaching confirmation to the user created previously
