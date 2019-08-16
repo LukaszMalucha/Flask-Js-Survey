@@ -104,7 +104,7 @@ label {
     width: 100%;
     padding: 6px;
     border-radius: 0px;
-
+    display: none
 }
 
 .alert-success {

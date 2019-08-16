@@ -13,6 +13,7 @@ class UserModel(db.Model):
     email = db.Column(db.String(50), nullable=False, unique=True)
     username = db.Column(db.String(80), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
+    is_active = db.Column(db.Boolean, default=False, nullable=False)
 
     confirmation = db.relationship("ConfirmationModel",
                                    lazy="dynamic",  # allows attaching confirmation to the user created previously

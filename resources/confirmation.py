@@ -31,8 +31,7 @@ class Confirm(Resource):
         confirmation.confirmed = True
         try:
             confirmation.save_to_db()
-            # session['message_success'] = gettext("user_logged_in").format(confirmation.user.username)
-            session['message_success'] = "ASLKJDFHALSFHLA"
+            session['message_success'] = gettext("user_logged_in").format(confirmation.user.username)
             ## LOGIN
             return {'status': 200}
         except:

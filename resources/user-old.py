@@ -2,7 +2,7 @@ from flask import session, Response, render_template, redirect, flash, url_for, 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
-from libs.forms import LoginForm
+from libs.forms import RegisterForm, LoginForm
 from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
 from schemas.user import UserSchema
 from models.confirmation import ConfirmationModel

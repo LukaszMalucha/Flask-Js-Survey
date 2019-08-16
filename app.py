@@ -42,6 +42,7 @@ api.add_resource(Confirm, '/confirm')
 def dashboard():
 
     message_success = session.get('message_success', None)
+    session['message_success'] = None
     return render_template('dashboard.html', message_success=message_success)
 
 
