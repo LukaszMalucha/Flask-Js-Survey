@@ -72,10 +72,10 @@ class UserLogin(Resource):
 
     @classmethod
     def get(cls):
-        form = LoginForm()
+
 
         # alert alert-success
-        return Response(render_template('user/login.html', form=form))  # passing login form to login template
+        return Response(render_template('user/login.html'))  # passing login form to login template
 
     @classmethod
     def post(cls):
@@ -94,6 +94,8 @@ class UserLogin(Resource):
             return {'user' : user}
 
         return Response(render_template('user/login.html', form=form))
+
+
 
 
 class UserLogout(Resource):

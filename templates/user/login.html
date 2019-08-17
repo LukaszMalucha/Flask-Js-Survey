@@ -8,38 +8,24 @@
 {% endblock %}
 {% block content %}
 <div class="row row-alert" style="min-height: 72px">
-            {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
 
-            {% for category, message in messages %}
-            <div class="{{ category }}">
-                <div class="messages text-center">
-                    {{ message }}
-                </div>
-            </div>
-            {% endfor %}
-
-            {% endif %}
-            {% endwith %}
-        </div>
+</div>
 
 
 <div class="container">
 
-    <form class="form-signin" method="POST" action="{{ url_for('userlogin') }}">
+    <form class="form-signin" method="POST" id="formLogin">
         <i class="material-icons" id="icon-login">lock</i>
         <fieldset class="form-box">
-            {{ form.hidden_tag() }}
             <div class="row text-center">
                 <h4>Login User</h4>
-                {{ message }}
             </div>
             <div class="row plain-element">
                 <div class="input-field col s6 field-description">
                     <h6>Your Email Address:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.email)}}
+                    <input class="form-control" id="email" name="email" required="" type="text" value="">
                 </div>
             </div>
             <div class="row plain-element">
@@ -47,14 +33,18 @@
                     <h6>Your Password:</h6>
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.password)}}
+                    <input class="form-control" id="password" name="password" required="" type="password" value="">
                 </div>
             </div>
             <div class="row plain-element">
                 <div class="input-field col s6 field-description">
                 </div>
                 <div class="input-field col s6">
-                    {{ wtf.form_field(form.remember)}}
+                    <div class="checkbox">
+                      <label>
+                        <input id="remember" name="remember" type="checkbox" value="y"> Remember Me
+                      </label>
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn-login"><span>Continue <i class="far fa-arrow-alt-circle-right"></i></span>
