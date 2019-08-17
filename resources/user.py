@@ -30,32 +30,29 @@ class UserRegister(Resource):
     @classmethod
     def get(cls):
         """Register User function"""
-        users = UserModel.find_by_id(1)
-        conf = ConfirmationModel.query.all()
-        #  passing signup form to signup template
-        return Response(render_template('user/register.html',  users=users, conf=conf))
+        return Response(render_template('user/register.html'))
 
     @classmethod
     def post(cls):
-        user = request.get_json()
-        if UserModel.find_by_email(user['email']):
+        user_data = request.get_json()
+        if UserModel.find_by_email(user_data['email']):
             return {'message': gettext("user_email_exists"), 'status': 400}
 
-        if "@" not in user['email']:
+        if "@" not in user_data['email']:
             return {'message': gettext("user_email_incorrect"), 'status': 400}
 
-        if UserModel.find_by_username(user['username']):
+        if UserModel.find_by_username(user_data['username']):
             return {'message': gettext("user_username_exists"), 'status': 400}
 
-        if user['password'] != user['confirm']:
+        if user_data['password'] != user_data['confirm']:
             return {'message': gettext("user_password_mismatch"), 'status': 400}
 
-        if len(user['password']) < 6:
+        if len(user_data['password']) < 6:
             return {'message': gettext("user_password_too_short"), 'status': 400}
 
-        hashed_password = generate_password_hash(user['password'],
+        hashed_password = generate_password_hash(user_data['password'],
                                                  method='sha256')  # password get hashed for security purposes
-        new_user = UserModel(email=user['email'], username=user['username'], password=hashed_password)
+        new_user = UserModel(email=user_data['email'], username=user_data['username'], password=hashed_password)
         try:
             new_user.save_to_db()
             confirmation = ConfirmationModel(new_user.id)
@@ -72,30 +69,23 @@ class UserLogin(Resource):
 
     @classmethod
     def get(cls):
-
-
-        # alert alert-success
+        """Login user function"""
         return Response(render_template('user/login.html'))  # passing login form to login template
 
     @classmethod
     def post(cls):
-        form = LoginForm()
+        user_data = request.get_json()
 
-        if form.validate_on_submit():  # if form was submitted....
-            user = UserModel.find_by_email(email=form.email.data)
-            if user:
-                if check_password_hash(user.password, form.password.data):
-                    # session['current_user'] = user.email
-                    # flash(f'You have successfully logged in as {user.email}', 'alert alert-success')
-                    login_user(user)
-                    return redirect("/")
+        user = UserModel.find_by_email(user_data['email'])
+        if user:
+            if check_password_hash(user.password, user_data['password']):
+                session['message_success'] = gettext("user_logged_in").format(user.username)
+                login_user(user)
+                return {'status': 200}
             else:
-                flash(u'Invalid Email or Password provided', 'alert alert-danger')
-            return {'user' : user}
-
-        return Response(render_template('user/login.html', form=form))
-
-
+                return {'message': gettext("user_invalid_password"), 'status': 400}
+        else:
+            return {'message': gettext("user_not_found").format(user_data['email']), 'status': 400}
 
 
 class UserLogout(Resource):
