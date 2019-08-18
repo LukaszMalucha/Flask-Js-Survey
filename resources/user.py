@@ -58,7 +58,6 @@ class UserRegister(Resource):
             confirmation = ConfirmationModel(new_user.id)
             confirmation.save_to_db()
             confirmation_id = confirmation.id
-            # login_user(new_user)
             return {'confirmation': confirmation_id, 'status': 200}
         except:
             new_user.delete_from_db()
