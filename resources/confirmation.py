@@ -8,6 +8,7 @@ from models.confirmation import ConfirmationModel
 class ConfirmationPage(Resource):
     @classmethod
     def get(cls, confirmation_id):
+        """User registration confirmation page"""
         link = request.url_root[:-1] + url_for("confirmationpage", confirmation_id=confirmation_id)
         confirmation = ConfirmationModel.find_by_id(confirmation_id)
         email = confirmation.user.email
@@ -18,6 +19,7 @@ class ConfirmationPage(Resource):
 class Confirm(Resource):
     @classmethod
     def post(cls):
+        """Confirm registration"""
         confirmation_data = request.get_json()
         confirmation_id = confirmation_data['confirmation_id']
         confirmation = ConfirmationModel.find_by_id(confirmation_id)

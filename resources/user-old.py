@@ -1,9 +1,7 @@
 from flask import session, Response, render_template, redirect, flash, url_for, request
-from flask_jwt import jwt_required
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
-from werkzeug.security import safe_str_cmp
 from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
 from schemas.user import UserSchema
 from models.confirmation import ConfirmationModel
@@ -79,24 +77,22 @@ class UserLogin(Resource):
     def post(cls):
         """Login user to application"""
         user_data = request.get_json()
+
         user = UserModel.find_by_email(user_data['email'])
-        if user and safe_str_cmp(user.password, user_data['password']):
-            # Check if user is activated
-            confirmation = user.most_recent_confirmation
-            if confirmation and confirmation.confirmed:
+        if user:
+            if check_password_hash(user.password, user_data['password']):
                 session['message_success'] = gettext("user_logged_in").format(user.username)
                 login_user(user)
-                #JWT
                 return {'status': 200}
             else:
-                return {'message': gettext("user_invalid_credentials"), 'status': 401}
+                return {'message': gettext("user_invalid_password"), 'status': 400}
         else:
             return {'message': gettext("user_not_found").format(user_data['email']), 'status': 400}
 
 
 class UserLogout(Resource):
+
     @classmethod
-    @jwt_required
     def get(cls):
         """logout user"""
         logout_user()

@@ -21,10 +21,3 @@ class AlgorithmModel:
         return mongo.db.suggested_algorithms.find_one({'algorithm': name})
 
 
-# {
-#     "_id": {
-#         "$oid": "5d0948ab4506d900047d4201"
-#     },
-#     "algorithm": "test", !!!!!!!!!!!!!!!!!!!!!!!!!!! ZAMIENIC NA NAME
-#     "description": "test"
-# }
