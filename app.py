@@ -50,10 +50,10 @@ api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
 api.add_resource(Confirm, '/confirm')
 
-# Main View
+
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
-
+    """Main dashboard"""
     message_success = session.get('message_success', None)  # Success login message
     session['message_success'] = None
     return render_template('dashboard.html', message_success=message_success)

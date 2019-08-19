@@ -76,6 +76,7 @@ $(document).ready(function() {
 
             else if (data.status == 200){
                 window.location.href = "/";
+                console.log(data)
             }
 
         });

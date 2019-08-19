@@ -4,6 +4,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
 from werkzeug.security import safe_str_cmp
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity, \
+    jwt_required, get_raw_jwt
 from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
 from schemas.user import UserSchema
 from models.confirmation import ConfirmationModel
@@ -80,7 +82,7 @@ class UserLogin(Resource):
         """Login user to application"""
         user_data = request.get_json()
         user = UserModel.find_by_email(user_data['email'])
-        if user and safe_str_cmp(user.password, user_data['password']):
+        if user and check_password_hash(user.password, user_data['password']):
             # Check if user is activated
             confirmation = user.most_recent_confirmation
             if confirmation and confirmation.confirmed:
@@ -96,7 +98,7 @@ class UserLogin(Resource):
 
 class UserLogout(Resource):
     @classmethod
-    @jwt_required
+    ## LOGIN REQUIRED
     def get(cls):
         """logout user"""
         logout_user()
