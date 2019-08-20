@@ -8,11 +8,9 @@ from flask import Flask, render_template, jsonify, session
 from flask_bootstrap import Bootstrap
 from flask_pymongo import PyMongo
 from flask_restful import Api
-from flask_jwt_extended import JWTManager
 
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.confirmation import ConfirmationPage, Confirm
-from blacklist import BLACKLIST
 from ma import ma
 
 # Settings
@@ -33,15 +31,8 @@ api = Api(app)
 Bootstrap(app)
 mongo = PyMongo(app)
 
-# Init login manager
+# Login manager
 login_manager.init_app(app)
-
-# Enable jwt authentication (check resources.user.UserLogin)
-jwt = JWTManager(app)
-
-@jwt.token_in_blacklist_loader
-def chcek_if_token_in_blacklist(decrypted_token):
-    return decrypted_token['identity'] in BLACKLIST
 
 # Register Resources
 api.add_resource(UserRegister, '/register')

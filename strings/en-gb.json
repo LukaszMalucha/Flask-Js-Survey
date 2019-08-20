@@ -23,7 +23,7 @@
   "user_password_mismatch": "Password fields doesn't match.",
   "user_password_too_short": "Password must be at least 6 characters long",
   "user_deleted": "User deleted.",
-  "user_invalid_credentials": "Invalid credentials provided",
+  "user_invalid_password": "Invalid password provided",
   "user_logged_in": "User {} successfully logged in",
   "user_logged_out": "User <id={user_id}> successfully logged out.",
   "user_not_confirmed": "You have not confirmed registration, please check your email <{}>.",
