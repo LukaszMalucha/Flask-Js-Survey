@@ -4,19 +4,20 @@ from werkzeug.datastructures import FileStorage
 
 from flask_uploads import UploadSet, IMAGES
 
-IMAGE_SET = UploadSet("images", IMAGES) ## set of allowed extensions
+IMAGE_SET = UploadSet("images", IMAGES)  # set of allowed extensions
 
-def save_image(image: FileStorage, folder: str=None, name: str=None):
+
+def save_image(image: FileStorage, folder: str = None, name: str = None):
     """Takes FileStorage, name of the folder & file and save it"""
     return IMAGE_SET.save(image, folder, name)
 
 
-def get_path(filename: str = None,folder: str = None):
+def get_path(filename: str = None, folder: str = None):
     """Returns image file path"""
     return IMAGE_SET.path(filename, folder)
 
 
-def find_image_any_format(filename: str,folder: str):
+def find_image_any_format(filename: str, folder: str):
     """Takes a filename an returns image of any of the accepted formats"""
     for _format in IMAGES:
         image = f"{filename}.{_format}"
@@ -26,12 +27,14 @@ def find_image_any_format(filename: str,folder: str):
             return image_path
     return None
 
+
 def _retrieve_filename(file):
     """Check if file is instance of FileStorage, allows functions to use both filenames and FileStorages in order to
     retrieve a file name"""
     if isinstance(file, FileStorage):
         return file.filename
     return file
+
 
 def is_filename_safe(file):
     """Regex check if string matches"""

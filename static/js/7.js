@@ -13,16 +13,16 @@ $(document).ready(function() {
             })
         })
         .done(function(data){
-            console.log(data.status);
-            if (data.status > 299) {
-                $('#messageError').text(data.message).show().fadeOut(5000);
-
-            }
-
-            else if (data.status == 200){
-                var confirmation = data.confirmation
-                window.location.href = "/user_confirmation/" + confirmation
-            }
+            console.log(data);
+//            if (data.status > 299) {
+//                $('#messageError').text(data.message).show().fadeOut(5000);
+//
+//            }
+//
+//            else if (data.status == 200){
+//                var confirmation = data.confirmation
+//                window.location.href = "/user_confirmation/" + confirmation
+//            }
 
         });
         event.preventDefault();
