@@ -1,15 +1,15 @@
 from ma import ma
-from marshmallow import pre_dump, fields
+from marshmallow import pre_dump, fields, INCLUDE
 from models.user import UserModel
 
 
-class UserSchema(ma.Schema):
+class UserSchema(ma.ModelSchema):
     class Meta:
-        # model = UserModel
-        # confirm = fields.String()
-        # load_only = ("password","confirm")  # not returnable fields, only to load
-        # dump_only = ("id","confirmation")  # returnable only, not to load
+        model = UserModel
+        load_only = ("password",)  # not returnable fields, only to load
+        dump_only = ("id","confirmation")  # returnable only, not to load
         fields = ('username', 'email', 'password', 'confirm')
+
 
 
     # @pre_dump

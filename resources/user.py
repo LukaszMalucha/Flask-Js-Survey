@@ -36,35 +36,36 @@ class UserRegister(Resource):
     @classmethod
     def post(cls):
         """Register user and pass to confirmation page"""
-        user_data = user_schema.load(request.get_json())
-        # if UserModel.find_by_email(user_data['email']):
-        #     return {'message': gettext("user_email_exists"), 'status': 400}
-        #
-        # if "@" not in user_data['email']:
-        #     return {'message': gettext("user_email_incorrect"), 'status': 400}
-        #
-        # if UserModel.find_by_username(user_data['username']):
-        #     return {'message': gettext("user_username_exists"), 'status': 400}
-        #
-        # if user_data['password'] != user_data['confirm']:
-        #     return {'message': gettext("user_password_mismatch"), 'status': 400}
-        #
-        # if len(user_data['password']) < 6:
-        #     return {'message': gettext("user_password_too_short"), 'status': 400}
-        #
-        # hashed_password = generate_password_hash(user_data['password'],
-        #                                          method='sha256')  # password get hashed for security purposes
-        # new_user = UserModel(email=user_data['email'], username=user_data['username'], password=hashed_password)
-        # try:
-        #     new_user.save_to_db()
-        #     confirmation = ConfirmationModel(new_user.id)
-        #     confirmation.save_to_db()
-        #     confirmation_id = confirmation.id
-        #     return {'confirmation': confirmation_id, 'status': 200}
-        # except:
-        #     new_user.delete_from_db()
-        #     return {"message": gettext("user_error_creating"), 'status': 500}
-        return {'user': str(user_data)}
+        user_data = request.get_json()
+        user = user_schema.load(request.get_json())
+        if UserModel.find_by_email(user.email):
+            return {'message': gettext("user_email_exists"), 'status': 400}
+
+        if "@" not in user.email:
+            return {'message': gettext("user_email_incorrect"), 'status': 400}
+
+        if UserModel.find_by_username(user.username):
+            return {'message': gettext("user_username_exists"), 'status': 400}
+
+        if user.password != user_data['confirm']:
+            return {'message': gettext("user_password_mismatch"), 'status': 400}
+
+        if len(user.password) < 6:
+            return {'message': gettext("user_password_too_short"), 'status': 400}
+
+        hashed_password = generate_password_hash(user.password,
+                                                 method='sha256')  # password get hashed for security purposes
+        new_user = UserModel(email=user.email, username=user.username, password=hashed_password)
+        try:
+            new_user.save_to_db()
+            confirmation = ConfirmationModel(new_user.id)
+            confirmation.save_to_db()
+            confirmation_id = confirmation.id
+            return {'confirmation': confirmation_id, 'status': 200}
+        except:
+            new_user.delete_from_db()
+            return {"message": gettext("user_error_creating"), 'status': 500}
+        # return {'user': str(user_data)}
 
 class UserLogin(Resource):
 
