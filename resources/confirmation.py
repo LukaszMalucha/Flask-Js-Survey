@@ -1,3 +1,5 @@
+from time import time
+
 from flask import render_template, request, url_for, Response, session
 from flask_restful import Resource
 from flask_login import login_user
@@ -9,7 +11,8 @@ class ConfirmationPage(Resource):
     @classmethod
     def get(cls, confirmation_id):
         """User registration confirmation page"""
-        link = request.url_root[:-1] + url_for("confirmationpage", confirmation_id=confirmation_id)
+        link = request.url_root[:-1] + url_for("confirmationpage",
+                                               confirmation_id=confirmation_id)  # create confirmation link
         confirmation = ConfirmationModel.find_by_id(confirmation_id)
         email = confirmation.user.email
         return Response(
@@ -40,3 +43,4 @@ class Confirm(Resource):
         except:
             confirmation.confirmed = False
             return {"message": gettext("confirmation_confirm_error"), 'status': 500}
+

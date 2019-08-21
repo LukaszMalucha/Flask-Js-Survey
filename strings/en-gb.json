@@ -27,6 +27,7 @@
   "user_logged_in": "User {} successfully logged in",
   "user_logged_out": "User <id={user_id}> successfully logged out.",
   "user_not_confirmed": "You have not confirmed registration, please check your email <{}>.",
+  "user_not_logged_in": "You have to log in first",
   "user_error_creating": "Internal server error. Failed to create user.",
   "user_registered": "Thank you. Your registration has been confirmed through {}.",
 

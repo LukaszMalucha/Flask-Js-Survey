@@ -2,7 +2,7 @@ from flask import session, Response, render_template, redirect, flash, url_for, 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
 from models.user import UserModel
-from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin
+from flask_login import LoginManager, login_user, logout_user, AnonymousUserMixin, login_required
 from schemas.user import UserSchema
 from models.confirmation import ConfirmationModel
 from libs.strings import gettext
@@ -16,9 +16,14 @@ def load_user(user_id):
     """Init load active user"""
     return UserModel.find_by_id(int(user_id))
 
+@login_manager.unauthorized_handler
+def unauthorized():
+    """Login missing"""
+    session['message_warning'] = gettext("user_not_logged_in")
+    return Response(render_template('user/login.html'))
 
 class Anonymous(AnonymousUserMixin):
-    """If not logged in"""
+    """Guest user class"""
     def __init__(self):
         self.email = 'Guest'
 
@@ -77,26 +82,28 @@ class UserLogin(Resource):
     @classmethod
     def post(cls):
         """Login user to application"""
-        user_data = request.get_json()
-        user = UserModel.find_by_email(user_data['email'])
+        user_json = request.get_json()
+        user_data = user_schema.load(user_json, partial=('username','confirm'))
+        user = UserModel.find_by_email(user_data.email)
         if user:
-            if check_password_hash(user.password, user_data['password']):
+            if check_password_hash(user.password, user_data.password):
                 # Check if user is activated
                 confirmation = user.most_recent_confirmation
                 if confirmation and confirmation.confirmed:
                     session['message_success'] = gettext("user_logged_in").format(user.username)
-                    login_user(user)
+                    login_user(user, remember=True)
                     return {'status': 200}
                 else:
                     return {'message': gettext("user_not_confirmed"), 'status': 401}
             else:
                 return {'message': gettext("user_invalid_password"), 'status': 401}
         else:
-            return {'message': gettext("user_not_found").format(user_data['email']), 'status': 400}
-
+            return {'message': gettext("user_not_found").format(user_data.email), 'status': 400}
+## REMEMBER FUNCTIONALITY!!!!!!!!!
 
 class UserLogout(Resource):
     @classmethod
+    @login_required
     def get(cls):
         """logout user"""
         logout_user()

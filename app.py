@@ -47,6 +47,8 @@ def dashboard():
     """Main dashboard"""
     message_success = session.get('message_success', None)  # Success login message
     session['message_success'] = None
+    message_warning = session.get('message_warning', None)  # Warning message
+    session['message_warning'] = None
     return render_template('dashboard.html', message_success=message_success)
 
 
