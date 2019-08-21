@@ -98,6 +98,7 @@ label {
 
 }
 
+
 .alert-danger{
     text-align: center;
     font-size: 1rem;
@@ -107,13 +108,13 @@ label {
     display: none
 }
 
+.alert-warning,
 .alert-success {
     text-align: center;
     font-size: 1rem;
     width: 100%;
     padding: 6px;
     border-radius: 0px;
-
 }
 
 

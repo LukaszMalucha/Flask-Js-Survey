@@ -20,7 +20,7 @@ def load_user(user_id):
 def unauthorized():
     """Login missing"""
     session['message_warning'] = gettext("user_not_logged_in")
-    return Response(render_template('user/login.html'))
+    return redirect(url_for('dashboard'))
 
 class Anonymous(AnonymousUserMixin):
     """Guest user class"""
@@ -109,6 +109,22 @@ class UserLogout(Resource):
         logout_user()
         return redirect("login")
 
+class SetPassword(Resource):
+    @classmethod
+    @login_required
+    def post(cls):
+        """finds user and changes/set new password. For oauth if user comes back"""
+        user_json = request.get_json()
+        user_data = user_schema.load(user_json) # username and new password
+        user = UserModel.find_by_username(user_data.username)
+
+        if not user:
+            return {"message": gettext("user_not_found")}, 400
+
+        user.password = user_data.password
+        user.save_to_db()
+
+        return  {"message": gettext("user_password_updated")}, 201
 
 # REST FUNCTIONALITY
 

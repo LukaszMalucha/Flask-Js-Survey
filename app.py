@@ -9,8 +9,9 @@ from flask_bootstrap import Bootstrap
 from flask_pymongo import PyMongo
 from flask_restful import Api
 
-from resources.user import UserRegister, UserLogin, UserLogout, login_manager
+from resources.user import UserRegister, UserLogin, UserLogout, login_manager, SetPassword
 from resources.confirmation import ConfirmationPage, Confirm
+from resources.github_login import GithubLogin, GithubAuthorize
 from ma import ma
 
 # Settings
@@ -39,6 +40,8 @@ api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
+api.add_resource(GithubLogin, "/login/github")
+api.add_resource(GithubAuthorize, "/login/github/authorized", endpoint="github.authorize")
 api.add_resource(Confirm, '/confirm')
 
 
@@ -49,7 +52,7 @@ def dashboard():
     session['message_success'] = None
     message_warning = session.get('message_warning', None)  # Warning message
     session['message_warning'] = None
-    return render_template('dashboard.html', message_success=message_success)
+    return render_template('dashboard.html', message_success=message_success, message_warning=message_warning)
 
 
 # SciKit Map:
