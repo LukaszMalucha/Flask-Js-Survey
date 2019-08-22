@@ -59,6 +59,25 @@ label {
     display: none;
 }
 
+.icon-login {
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.material-tooltip {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #f3f3f3;
+  border: 1px solid #737373;
+  color: #737373;
+  margin: 4px 121px 0 5px;
+  float: right;
+  text-align: left !important;
+}
+
 /*------------------------------------------------------------------------------
     ROWS
 ------------------------------------------------------------------------------*/
@@ -86,7 +105,11 @@ label {
     font-size: 1.2rem;
 }
 
+.row-icons {
+    width: 25%;
+    margin: auto;
 
+}
 
 /*------------------------------------------------------------------------------
     FORMS
