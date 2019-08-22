@@ -56,7 +56,6 @@ $(document).ready(function() {
 
 
 // LOGIN USER
-// REGISTER USER
     $('#formLogin').on('submit', function(event){
         $.ajax({
             type : 'POST',
@@ -82,5 +81,4 @@ $(document).ready(function() {
         });
         event.preventDefault();
     });
-
 });

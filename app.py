@@ -9,10 +9,11 @@ from flask_bootstrap import Bootstrap
 from flask_pymongo import PyMongo
 from flask_restful import Api
 
-from resources.user import UserRegister, UserLogin, UserLogout, login_manager, SetPassword
+from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.confirmation import ConfirmationPage, Confirm
 from resources.github_login import GithubLogin, GithubAuthorize
 from ma import ma
+from oa import oauth
 
 # Settings
 app = Flask(__name__)

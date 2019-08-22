@@ -66,16 +66,15 @@ label {
 }
 
 .material-tooltip {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  font-weight: 700;
-  background: #f3f3f3;
-  border: 1px solid #737373;
-  color: #737373;
-  margin: 4px 121px 0 5px;
-  float: right;
-  text-align: left !important;
+  padding: 5px;
+  min-height: 0px;
+  border-radius: 5%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background: #1a2026;
+  border: 0px solid #737373;
+  color: white;
 }
 
 /*------------------------------------------------------------------------------

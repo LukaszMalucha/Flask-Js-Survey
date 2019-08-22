@@ -99,7 +99,7 @@ class UserLogin(Resource):
                 return {'message': gettext("user_invalid_password"), 'status': 401}
         else:
             return {'message': gettext("user_not_found").format(user_data.email), 'status': 400}
-## REMEMBER FUNCTIONALITY!!!!!!!!!
+
 
 class UserLogout(Resource):
     @classmethod
@@ -108,6 +108,10 @@ class UserLogout(Resource):
         """logout user"""
         logout_user()
         return redirect("login")
+
+
+
+# FOR REST FUNCTIONALITY
 
 class SetPassword(Resource):
     @classmethod
@@ -125,8 +129,6 @@ class SetPassword(Resource):
         user.save_to_db()
 
         return  {"message": gettext("user_password_updated")}, 201
-
-# REST FUNCTIONALITY
 
 class User(Resource):
 
