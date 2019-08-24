@@ -12,6 +12,7 @@ from flask_restful import Api
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.confirmation import ConfirmationPage, Confirm
 from resources.github_login import GithubLogin, GithubAuthorize
+from resources.google_login import GoogleLogin, GoogleAuthorize
 from ma import ma
 from oa import oauth
 
@@ -43,6 +44,8 @@ api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
 api.add_resource(GithubLogin, "/login/github")
 api.add_resource(GithubAuthorize, "/login/github/authorized", endpoint="github.authorize")
+api.add_resource(GoogleLogin, "/login/google")
+api.add_resource(GoogleAuthorize, "/login/google/authorized", endpoint="google.authorize")
 api.add_resource(Confirm, '/confirm')
 
 
