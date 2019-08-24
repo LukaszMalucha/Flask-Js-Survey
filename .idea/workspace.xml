@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/google_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oa.py" beforeDir="false" afterPath="$PROJECT_DIR$/oa.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/github_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/github_login.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +33,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/schemas" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -195,38 +198,6 @@
       <updated>1547486017922</updated>
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_in_unit - 2019.06.06 at 08h 19m 58s.xml">
-      <configuration name="Unittests in unit" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 25m 52s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 27m 18s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_tests - 2019.06.06 at 08h 27m 32s.xml">
-      <configuration name="Unittests in tests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_mongo_AlgorithmTest - 2019.06.06 at 08h 27m 51s.xml">
-      <configuration name="Unittests for test_mongo.AlgorithmTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_base_test_BaseTest - 2019.06.06 at 08h 28m 04s.xml">
-      <configuration name="Unittests for base_test.BaseTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 55m 06s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 55m 08s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 55m 09s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_sqlite_py - 2019.06.06 at 08h 55m 36s.xml">
-      <configuration name="Unittests in test_sqlite.py" configurationId="tests" />
-    </history-entry>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
