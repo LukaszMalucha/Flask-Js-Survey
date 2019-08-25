@@ -27,15 +27,15 @@ class GoogleAuthorize(Resource):
             return error_response
 
         g.access_token = resp['access_token']  # put access token inside flask_global
-        google_user = google.get('user')
-        google_email = google_user.data['login'] ??????????????????????????????????????????????
-
-        user = UserModel.find_by_username(google_email)
-
-        if not user:
-            user = UserModel(username=google_email, email=google_email,
-                             password=None)  # if login with google, there is no password given
-            user.save_to_db()
-
-        login_user(user)
-        return redirect('/')
+        google_user = google.get('userinfo.email')
+        google_email = google_user.data[0:]
+        return str(resp)
+        # user = UserModel.find_by_username(google_email)
+        #
+        # if not user:
+        #     user = UserModel(username=google_email, email=google_email,
+        #                      password=None)  # if login with google, there is no password given
+        #     user.save_to_db()
+        #
+        # login_user(user)
+        # return redirect('/')
