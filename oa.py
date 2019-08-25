@@ -27,12 +27,12 @@ def get_github_token():
 
 
 # GOOGLE
-
+# https://www.googleapis.com/auth/userinfo.email
 google = oauth.remote_app(
     'google',
     consumer_key=os.environ.get("GOOGLE_CLIENT_ID"),  # consumer key
     consumer_secret=os.environ.get("GOOGLE_CLIENT_SECRET"),  # consumer secret
-    request_token_params={'scope': 'https://www.googleapis.com/auth/userinfo.email'},
+    request_token_params={'scope': 'user'},
     base_url='https://www.google.com/accounts/',
     request_token_url=None,  # None for OAuth 2.0
     access_token_method='POST',

@@ -108,7 +108,7 @@ class UserLogout(Resource):
         """logout user"""
         logout_user()
         return redirect("login")
-
+        ################################################ MSG
 
 
 # FOR REST FUNCTIONALITY

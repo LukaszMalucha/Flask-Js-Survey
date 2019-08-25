@@ -1,4 +1,4 @@
-from flask import g, request, url_for, redirect
+from flask import g, request, url_for, redirect, session
 from flask_login import login_user
 from flask_restful import Resource
 
@@ -24,12 +24,11 @@ class GithubAuthorize(Resource):
                 "error": request.args['error'],
                 "error_description": request.args["error_description"]
             }
-            return error_response
+            return error_response ########## URL DO TEGO I GOOGLE
 
         g.access_token = resp['access_token']  # put access token inside flask_global
         github_user = github.get('user')
         github_email = github_user.data['login']
-
         user = UserModel.find_by_username(github_email)
 
         if not user:
@@ -38,4 +37,5 @@ class GithubAuthorize(Resource):
             user.save_to_db()
 
         login_user(user)
-        return redirect('/')
+
+        return redirect('/')  ## URL FOR

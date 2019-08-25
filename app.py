@@ -52,11 +52,13 @@ api.add_resource(Confirm, '/confirm')
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
     """Main dashboard"""
+    data = session.get('test', None)
+    session['test'] = None
     message_success = session.get('message_success', None)  # Success login message
     session['message_success'] = None
     message_warning = session.get('message_warning', None)  # Warning message
     session['message_warning'] = None
-    return render_template('dashboard.html', message_success=message_success, message_warning=message_warning)
+    return render_template('dashboard.html', message_success=message_success, message_warning=message_warning, data= data)
 
 
 # SciKit Map:
