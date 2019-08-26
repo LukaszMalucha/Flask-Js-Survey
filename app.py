@@ -40,25 +40,24 @@ login_manager.init_app(app)
 # Register Resources
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
+api.add_resource(Confirm, '/confirm')
 api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
 api.add_resource(GithubLogin, "/login/github")
 api.add_resource(GithubAuthorize, "/login/github/authorized", endpoint="github.authorize")
 api.add_resource(GoogleLogin, "/login/google")
 api.add_resource(GoogleAuthorize, "/login/google/authorized", endpoint="google.authorize")
-api.add_resource(Confirm, '/confirm')
+
 
 
 @app.route('/', methods=['GET', 'POST'])
 def dashboard():
     """Main dashboard"""
-    data = session.get('test', None)
-    session['test'] = None
     message_success = session.get('message_success', None)  # Success login message
     session['message_success'] = None
     message_warning = session.get('message_warning', None)  # Warning message
     session['message_warning'] = None
-    return render_template('dashboard.html', message_success=message_success, message_warning=message_warning, data= data)
+    return render_template('dashboard.html', message_success=message_success, message_warning=message_warning)
 
 
 # SciKit Map:

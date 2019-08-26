@@ -32,7 +32,7 @@ google = oauth.remote_app(
     'google',
     consumer_key=os.environ.get("GOOGLE_CLIENT_ID"),  # consumer key
     consumer_secret=os.environ.get("GOOGLE_CLIENT_SECRET"),  # consumer secret
-    request_token_params={'scope': 'user'},
+    request_token_params={'scope': 'email'},
     base_url='https://www.google.com/accounts/',
     request_token_url=None,  # None for OAuth 2.0
     access_token_method='POST',

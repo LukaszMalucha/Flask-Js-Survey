@@ -16,14 +16,17 @@ def load_user(user_id):
     """Init load active user"""
     return UserModel.find_by_id(int(user_id))
 
+
 @login_manager.unauthorized_handler
 def unauthorized():
     """Login missing"""
     session['message_warning'] = gettext("user_not_logged_in")
     return redirect(url_for('dashboard'))
 
+
 class Anonymous(AnonymousUserMixin):
     """Guest user class"""
+
     def __init__(self):
         self.email = 'Guest'
 
@@ -72,6 +75,7 @@ class UserRegister(Resource):
             return {"message": gettext("user_error_creating"), 'status': 500}
         # return {'user': str(user_data)}
 
+
 class UserLogin(Resource):
 
     @classmethod
@@ -83,7 +87,7 @@ class UserLogin(Resource):
     def post(cls):
         """Login user to application"""
         user_json = request.get_json()
-        user_data = user_schema.load(user_json, partial=('username','confirm'))
+        user_data = user_schema.load(user_json, partial=('username', 'confirm'))
         user = UserModel.find_by_email(user_data.email)
         if user:
             if check_password_hash(user.password, user_data.password):
@@ -107,8 +111,8 @@ class UserLogout(Resource):
     def get(cls):
         """logout user"""
         logout_user()
+        session['message_success'] = gettext("user_logged_out")
         return redirect("login")
-        ################################################ MSG
 
 
 # FOR REST FUNCTIONALITY
@@ -119,7 +123,7 @@ class SetPassword(Resource):
     def post(cls):
         """finds user and changes/set new password. For oauth if user comes back"""
         user_json = request.get_json()
-        user_data = user_schema.load(user_json) # username and new password
+        user_data = user_schema.load(user_json)  # username and new password
         user = UserModel.find_by_username(user_data.username)
 
         if not user:
@@ -128,7 +132,8 @@ class SetPassword(Resource):
         user.password = user_data.password
         user.save_to_db()
 
-        return  {"message": gettext("user_password_updated")}, 201
+        return {"message": gettext("user_password_updated")}, 201
+
 
 class User(Resource):
 

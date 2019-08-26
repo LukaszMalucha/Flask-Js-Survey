@@ -12,8 +12,8 @@ class GoogleLogin(Resource):
     def get(cls):
         """send user to authorization page"""
         return google.authorize(url_for("google.authorize", _external=True))  # external because we build full url
-    
-    
+
+
 class GoogleAuthorize(Resource):
     @classmethod
     def get(cls):
@@ -25,7 +25,8 @@ class GoogleAuthorize(Resource):
                 "error": request.args['error'],
                 "error_description": request.args["error_description"]
             }
-            return error_response
+            session['message_warning'] = request.args["error_description"]
+            return redirect(url_for('dashboard'))
 
         g.access_token = resp['access_token']  # put access token inside flask_global
         google_user = google.get('https://www.googleapis.com/oauth2/v2/userinfo')
@@ -39,4 +40,4 @@ class GoogleAuthorize(Resource):
 
         login_user(user)
         session['message_success'] = gettext("user_logged_in").format(google_email)
-        return redirect('/')
+        return redirect(url_for('dashboard'))

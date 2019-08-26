@@ -2,6 +2,7 @@ from flask import g, request, url_for, redirect, session
 from flask_login import login_user
 from flask_restful import Resource
 
+from libs.strings import gettext
 from models.user import UserModel
 from oa import github
 
@@ -10,7 +11,7 @@ class GithubLogin(Resource):
     @classmethod
     def get(cls):
         """send user to authorization page"""
-        return github.authorize(url_for("github.authorize", _external=True))  # external beacuse we build full url
+        return github.authorize(url_for("github.authorize", _external=True))  # external because we build full url
 
 
 class GithubAuthorize(Resource):
@@ -24,7 +25,9 @@ class GithubAuthorize(Resource):
                 "error": request.args['error'],
                 "error_description": request.args["error_description"]
             }
-            return error_response ########## URL DO TEGO I GOOGLE
+
+            session['message_warning'] = request.args["error_description"]
+            return redirect(url_for('dashboard'))
 
         g.access_token = resp['access_token']  # put access token inside flask_global
         github_user = github.get('user')
@@ -37,5 +40,5 @@ class GithubAuthorize(Resource):
             user.save_to_db()
 
         login_user(user)
-
-        return redirect('/')  ## URL FOR
+        session['message_success'] = gettext("user_logged_in").format(github_email)
+        return redirect(url_for('dashboard'))
