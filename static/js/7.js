@@ -64,6 +64,7 @@ $(document).ready(function() {
             data: JSON.stringify({
                 email: $('#email').val(),
                 password: $('#password').val(),
+                remember: $('#remember').is(":checked")
             })
         })
         .done(function(data){

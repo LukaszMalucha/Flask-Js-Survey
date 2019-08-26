@@ -41,4 +41,4 @@ class GithubAuthorize(Resource):
 
         login_user(user)
         session['message_success'] = gettext("user_logged_in").format(github_email)
-        return redirect(url_for('dashboard'))
+        return redirect('/')

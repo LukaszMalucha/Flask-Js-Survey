@@ -73,7 +73,6 @@ class UserRegister(Resource):
         except:
             new_user.delete_from_db()
             return {"message": gettext("user_error_creating"), 'status': 500}
-        # return {'user': str(user_data)}
 
 
 class UserLogin(Resource):
@@ -87,15 +86,20 @@ class UserLogin(Resource):
     def post(cls):
         """Login user to application"""
         user_json = request.get_json()
-        user_data = user_schema.load(user_json, partial=('username', 'confirm'))
+        user_data = user_schema.load(user_json, partial=('username', 'confirm', 'remember'))
         user = UserModel.find_by_email(user_data.email)
+        if not user.password:
+            return {'message': gettext("user_not_found").format(user_data.email), 'status': 400}  # simple handling oauth
         if user:
             if check_password_hash(user.password, user_data.password):
                 # Check if user is activated
                 confirmation = user.most_recent_confirmation
                 if confirmation and confirmation.confirmed:
                     session['message_success'] = gettext("user_logged_in").format(user.username)
-                    login_user(user, remember=True)
+                    if user_json['remember']:
+                        login_user(user, remember=True)
+                    else:
+                        login_user(user)
                     return {'status': 200}
                 else:
                     return {'message': gettext("user_not_confirmed"), 'status': 401}
