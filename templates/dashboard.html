@@ -19,17 +19,16 @@
 
 </div>
 
+{% block head_js %}
+<script type="text/javascript">
+    var questions = [{% for item in questions %}
+        "{{item }}" ,
+        {% endfor %}];
 
+    var answers =  {{ answers|tojson }};
+</script>
+<script src="{{url_for('static', filename='js/questions.js')}}"></script>
+{% endblock head_js %}
 
-<script src="{{url_for('static', filename='js/forms.js')}}"></script>
 
 {% endblock %}
-<!--<script type="text/javascript">-->
-<!--    var questions = [{% for item in questions %}-->
-<!--        "{{item }}" ,-->
-<!--        {% endfor %}];-->
-
-<!--    var answers =  {{ answers|tojson }};-->
-
-
-<!--</script>-->

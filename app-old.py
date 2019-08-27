@@ -13,10 +13,8 @@ from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.confirmation import ConfirmationPage, Confirm
 from resources.github_login import GithubLogin, GithubAuthorize
 from resources.google_login import GoogleLogin, GoogleAuthorize
-from resources.survey import Survey
 from ma import ma
 from oa import oauth
-from db import mongo
 
 # Settings
 app = Flask(__name__)
@@ -34,7 +32,7 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 api = Api(app)
 
 Bootstrap(app)
-mongo.init_app(app)
+mongo = PyMongo(app)
 
 # Login manager
 login_manager.init_app(app)
@@ -49,29 +47,28 @@ api.add_resource(GithubLogin, "/login/github")
 api.add_resource(GithubAuthorize, "/login/github/authorized", endpoint="github.authorize")
 api.add_resource(GoogleLogin, "/login/google")
 api.add_resource(GoogleAuthorize, "/login/google/authorized", endpoint="google.authorize")
-api.add_resource(Survey, "/")
 
 
-# @app.route('/', methods=['GET', 'POST'])
-# def dashboard():
-#     """Main dashboard"""
-#     message_success = session.get('message_success', None)  # Success login message
-#     session['message_success'] = None
-#     message_warning = session.get('message_warning', None)  # Warning message
-#     session['message_warning'] = None
-#
-#     question_query = mongo.db.Questions.find({})
-#     answers = []
-#     questions = []
-#     for element in question_query:
-#         questions.append(element['question'])
-#         answers.append(element['answers'])
-#
-#     return render_template('dashboard.html',
-#                            message_success=message_success,
-#                            message_warning=message_warning,
-#                            questions=questions,
-#                            answers=answers)
+@app.route('/', methods=['GET', 'POST'])
+def dashboard():
+    """Main dashboard"""
+    message_success = session.get('message_success', None)  # Success login message
+    session['message_success'] = None
+    message_warning = session.get('message_warning', None)  # Warning message
+    session['message_warning'] = None
+
+    question_query = mongo.db.Questions.find({})
+    answers = []
+    questions = []
+    for element in question_query:
+        questions.append(element['question'])
+        answers.append(element['answers'])
+
+    return render_template('dashboard.html',
+                           message_success=message_success,
+                           message_warning=message_warning,
+                           questions=questions,
+                           answers=answers)
 
 
 # SciKit Map:

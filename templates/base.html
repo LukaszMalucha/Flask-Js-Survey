@@ -20,15 +20,16 @@
     <!-- Custom Styles-->
     <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
+    <!-- Survey Styles-->
+    <link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Survey Js -->
+<script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
 
-<!--    <script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>-->
-<!--    <link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>-->
-
-
+<!-- Velocity Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
     {% block extrahead %}{% endblock %}
 
 </head>
@@ -116,6 +117,7 @@
 <div class="footer">
     <p> Powered by Septellar &trade;</p>
 </div>
+
 
 
 <!-- Bootstrap Js -->

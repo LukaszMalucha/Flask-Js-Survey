@@ -1,18 +1,20 @@
-from flask import request
+from flask import request, session
 from flask_restful import Resource
 from marshmallow import ValidationError
 from libs.strings import gettext
 from models.survey import SurveyModel
-from schemas.survey import SurveySchema
 from libs.estimator import estimate_results, estimate_score
 
-survey_list_schema = SurveySchema(many=True)
 
 
 class Survey(Resource):
     @classmethod
     def get(cls):
         """Get survey Q & A"""
+        message_success = session.get('message_success', None)  # Success login message
+        session['message_success'] = None
+        message_warning = session.get('message_warning', None)  # Warning message
+        session['message_warning'] = None
         survey = SurveyModel.find_all()
         answers = []
         questions = []
