@@ -1,4 +1,4 @@
-from flask import g, request, url_for, redirect, session, render_template
+from flask import g, request, url_for, redirect, session
 from flask_login import login_user
 from flask_restful import Resource
 

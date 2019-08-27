@@ -4,9 +4,11 @@
     <list default="true" id="d213878d-8b15-4c75-8974-a828ad160fff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/tests_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/libs/tests_score.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/github_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/github_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strings/en-gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/strings/en-gb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard-old.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,19 +39,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workshop\mlselector\schemas" />
-      <recent name="C:\Workshop\mlselector\resources" />
-      <recent name="C:\Workshop\mlselector\libs" />
-      <recent name="C:\Workshop\mlselector" />
-      <recent name="C:\Workshop\mlselector\templates\user" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workshop\mlselector" />
       <recent name="C:\Workshop\mlselector\templates" />
       <recent name="C:\Workshop\mlselector\resources" />
       <recent name="C:\Workshop\mlselector\libs" />
       <recent name="C:\Workshop\mlselector\tests\unit" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workshop\mlselector\schemas" />
+      <recent name="C:\Workshop\mlselector\resources" />
+      <recent name="C:\Workshop\mlselector\libs" />
+      <recent name="C:\Workshop\mlselector" />
+      <recent name="C:\Workshop\mlselector\templates\user" />
     </key>
   </component>
   <component name="RunDashboard">
