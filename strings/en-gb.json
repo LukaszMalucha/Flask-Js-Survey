@@ -20,6 +20,7 @@
   "user_email_exists": "A user with that email already exists",
   "user_email_incorrect": "Incorrect email address",
   "user_not_found": "User {} not found",
+  "user_via_oauth": "Please login via Google or GitHub",
   "user_password_mismatch": "Password fields don't match",
   "user_password_too_short": "Password must be at least 6 characters long",
   "user_deleted": "User deleted",
