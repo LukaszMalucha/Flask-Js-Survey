@@ -4,9 +4,8 @@ from marshmallow import ValidationError
 
 import env
 
-from flask import Flask, render_template, jsonify, session
+from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
-from flask_pymongo import PyMongo
 from flask_restful import Api
 
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
@@ -34,7 +33,7 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 api = Api(app)
 
 Bootstrap(app)
-mongo.init_app(app)
+
 
 # Login manager
 login_manager.init_app(app)
@@ -51,27 +50,6 @@ api.add_resource(GoogleLogin, "/login/google")
 api.add_resource(GoogleAuthorize, "/login/google/authorized", endpoint="google.authorize")
 api.add_resource(Survey, "/")
 
-
-# @app.route('/', methods=['GET', 'POST'])
-# def dashboard():
-#     """Main dashboard"""
-#     message_success = session.get('message_success', None)  # Success login message
-#     session['message_success'] = None
-#     message_warning = session.get('message_warning', None)  # Warning message
-#     session['message_warning'] = None
-#
-#     question_query = mongo.db.Questions.find({})
-#     answers = []
-#     questions = []
-#     for element in question_query:
-#         questions.append(element['question'])
-#         answers.append(element['answers'])
-#
-#     return render_template('dashboard.html',
-#                            message_success=message_success,
-#                            message_warning=message_warning,
-#                            questions=questions,
-#                            answers=answers)
 
 
 # SciKit Map:
@@ -100,7 +78,7 @@ def handle_marshmallow_validation(error):
 
 if __name__ == '__main__':
     from db import db
-
+    mongo.init_app(app)
     db.init_app(app)
     ma.init_app(app)
     oauth.init_app(app)

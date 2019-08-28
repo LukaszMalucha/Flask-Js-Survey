@@ -1,4 +1,4 @@
-from flask import request, session
+from flask import request, session, render_template, Response
 from flask_restful import Resource
 from marshmallow import ValidationError
 from libs.strings import gettext
@@ -22,7 +22,11 @@ class Survey(Resource):
             questions.append(element['question'])
             answers.append(element['answers'])
 
-        return {'questions': questions, 'answers': answers}
+        return Response(render_template('dashboard.html',
+                               message_success=message_success,
+                               message_warning=message_warning,
+                               questions=questions,
+                               answers=answers))
 
     @classmethod
     def post(cls):

@@ -1,5 +1,5 @@
 
-
+// Init Survey.js element
 Survey
     .StylesManager
     .applyTheme("default");
@@ -7,6 +7,7 @@ Survey
     var answers_data = answers;
     $('#algorithm_results').hide();
 
+// pass the q & a data
 var json = {
     title: "Characterize your Data task to find out what's the most suitable algorithm.",
     showProgressBar: "bottom",
@@ -78,6 +79,7 @@ var json = {
 window.survey = new Survey.Model(json);
 survey.requiredText = ":"; survey.render();
 
+// Survey completed - get results
 survey
     .onComplete
 
@@ -86,11 +88,11 @@ survey
                 dataType: 'json',
                 contentType: 'application/json',
                 type : 'POST',
-                url : '/results',
+                url : '/',
                 data : JSON.stringify(result.data),
 
             })
-
+// Reveal Results element in dashboard.html
             .done(function(data) {
                  $('#algorithm_results').show();
                  $('#results').text(data.result).show();
