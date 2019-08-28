@@ -13,6 +13,7 @@ from resources.confirmation import ConfirmationPage, Confirm
 from resources.github_login import GithubLogin, GithubAuthorize
 from resources.google_login import GoogleLogin, GoogleAuthorize
 from resources.survey import Survey
+from resources.map import Map
 from ma import ma
 from oa import oauth
 from db import mongo
@@ -39,23 +40,21 @@ Bootstrap(app)
 login_manager.init_app(app)
 
 # Register Resources
+api.add_resource(Survey, '/')
+api.add_resource(Map, '/map')
+
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(Confirm, '/confirm')
 api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
-api.add_resource(GithubLogin, "/login/github")
-api.add_resource(GithubAuthorize, "/login/github/authorized", endpoint="github.authorize")
-api.add_resource(GoogleLogin, "/login/google")
-api.add_resource(GoogleAuthorize, "/login/google/authorized", endpoint="google.authorize")
-api.add_resource(Survey, "/")
+api.add_resource(GithubLogin, '/login/github')
+api.add_resource(GithubAuthorize, '/login/github/authorized", endpoint="github.authorize')
+api.add_resource(GoogleLogin, '/login/google')
+api.add_resource(GoogleAuthorize, '/login/google/authorized", endpoint="google.authorize')
 
 
 
-# SciKit Map:
-@app.route('/map')
-def map():
-    return render_template('map.html')
 
 
 # Error Handlers

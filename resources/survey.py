@@ -1,7 +1,5 @@
 from flask import request, session, render_template, Response
 from flask_restful import Resource
-from marshmallow import ValidationError
-from libs.strings import gettext
 from models.survey import SurveyModel
 from libs.estimator import estimate_results, estimate_score
 
