@@ -7,7 +7,7 @@ class AlgorithmModel:
         self.mongo = mongo
 
     def insert_algorithm(self, algorithm):
-        return mongo.db.suggested_algorithms.insert_one(algorithm)
+        return mongo.db.suggested_algorithms.insert(algorithm)
 
     def delete_algorithm(self, _id):
         mongo.db.suggested_algorithms.remove({'_id': _id})

@@ -6,9 +6,8 @@ $(document).ready(function() {
             url : '/algorithms',
             contentType: 'application/json;charset=UTF-8',
             data: JSON.stringify({
-                email: $('#email').val(),
-                username: $('#algorithm').val(),
-                password: $('#description').val(),
+                algorithm: $('#algorithm').val(),
+                description: $('#description').val(),
             })
         })
         .done(function(data){
