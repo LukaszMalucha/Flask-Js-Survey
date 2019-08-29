@@ -13,8 +13,9 @@
   "algorithm_blank_error": "'{}' cannot be blank",
   "algorithm_name_exists": "An algorithm with name '{}' already exists",
   "algorithm_error_inserting": "An error occurred while inserting the algorithm",
-  "algorithm_not_found": "algorithm not found",
-  "algorithm_deleted": "algorithm deleted",
+  "algorithm_not_found": "Algorithm not found",
+  "algorithm_deleted": "Algorithm deleted",
+  "algorithm_uploaded": "Algorithm {} uploaded successfully",
 
   "user_username_exists": "A user with that username already exists",
   "user_email_exists": "A user with that email already exists",
@@ -30,15 +31,5 @@
   "user_not_confirmed": "You have not confirmed registration, please check your email <{}>",
   "user_not_logged_in": "You have to log in first",
   "user_error_creating": "Internal server error. Failed to create user",
-  "user_registered": "Thank you. Your registration has been confirmed through {}",
-
-  "image_uploaded": "Image '{}' has been successfully uploaded",
-  "image_illegal_extension": "Extension '{}' is not allowed",
-  "image_illegal_file_name": "Requested filename {} not supported",
-  "image_not_found": "Image {} not found",
-  "image_deleted": "Image '{}' deleted",
-  "image_delete_failed": "Internal Server Error! Failed to delete a '{}' file",
-  "avatar_delete_failed": "Internal Server Error! Failed to delete a '{}' avatar",
-  "avatar_uploaded": "Profile picture '{}' successfully uploaded",
-  "avatar_not_found": "Avatar not found"
+  "user_registered": "Thank you. Your registration has been confirmed through {}"
 }

@@ -19,5 +19,3 @@ class AlgorithmModel:
     @classmethod
     def find_by_name(cls, name):
         return mongo.db.suggested_algorithms.find_one({'algorithm': name})
-
-

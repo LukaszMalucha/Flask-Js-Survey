@@ -20,7 +20,7 @@ class Survey(Resource):
             questions.append(element['question'])
             answers.append(element['answers'])
 
-        return Response(render_template('dashboard.html',
+        return Response(render_template('survey.html',
                                message_success=message_success,
                                message_warning=message_warning,
                                questions=questions,

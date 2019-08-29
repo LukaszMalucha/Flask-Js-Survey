@@ -54,7 +54,7 @@ api.add_resource(GithubAuthorize, '/login/github/authorized", endpoint="github.a
 api.add_resource(GoogleLogin, '/login/google')
 api.add_resource(GoogleAuthorize, '/login/google/authorized", endpoint="google.authorize')
 
-api.add_resource(Algorithms, '/add_request')
+api.add_resource(Algorithms, '/algorithms')
 
 
 

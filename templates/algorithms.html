@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 {% block extrahead %}
+
+<!-- Algorithms Ajax Calls -->
+<script src="{{url_for('static', filename='js/algorithms.js')}}"></script>
+
 <!-- Data Tables -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -13,7 +17,7 @@
 
 <div class="row row-cards">
     <div class="col-sm-12 col-md-4 col-lg-3">
-        <form action="{{url_for('dashboard') }}" id="add-form" method="POST" class="col s12">
+        <form action="{{url_for('survey') }}" id="formAlgorithm" method="POST" class="col s12">
             <div class="card form-card">
                 <div class="card-content">
                     <span class="card-title">Add Algorithm</span>

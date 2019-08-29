@@ -92,7 +92,7 @@ survey
                 data : JSON.stringify(result.data),
 
             })
-// Reveal Results element in dashboard.html
+// Reveal Results element in survey.html
             .done(function(data) {
                  $('#algorithm_results').show();
                  $('#results').text(data.result).show();
