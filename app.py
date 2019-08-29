@@ -14,6 +14,7 @@ from resources.github_login import GithubLogin, GithubAuthorize
 from resources.google_login import GoogleLogin, GoogleAuthorize
 from resources.survey import Survey
 from resources.map import Map
+from resources.algorithm import Algorithms
 from ma import ma
 from oa import oauth
 from db import mongo
@@ -53,7 +54,7 @@ api.add_resource(GithubAuthorize, '/login/github/authorized", endpoint="github.a
 api.add_resource(GoogleLogin, '/login/google')
 api.add_resource(GoogleAuthorize, '/login/google/authorized", endpoint="google.authorize')
 
-
+api.add_resource(Algorithms, '/add_request')
 
 
 
