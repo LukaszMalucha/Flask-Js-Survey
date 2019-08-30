@@ -1,7 +1,7 @@
 from db import mongo
 
 
-class AlgorithmModel:
+class AlgorithmCollection:
 
     def __init__(self):
         self.mongo = mongo

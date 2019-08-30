@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/custom-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/algorithms.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/algorithms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/algorithms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/algorithms.html" afterDir="false" />
     </list>

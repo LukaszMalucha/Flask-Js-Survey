@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 {% block extrahead %}
 
 <!-- Algorithms Ajax Calls -->
@@ -12,9 +12,10 @@
         $('#DataTable').dataTable();
     });
 
+
 </script>
 {% endblock %}
-
+{% block content %}
 <div class="row row-cards">
     <div class="col-sm-12 col-md-4 col-lg-3">
         <form id="formAlgorithm" method="POST" class="col s12">
@@ -58,7 +59,7 @@
                             <th class="center">Delete</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tableBody">
                         {% for algorithm in suggested_algorithms %}
                         <tr class="odd gradeA" id="algorithmRow{{ algorithm._id }}">
                             <td class="center" id="suggested_algorithm">{{algorithm.algorithm}}</td>
