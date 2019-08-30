@@ -15,21 +15,19 @@ class Algorithms(Resource):
     @classmethod
     def post(cls):
 
-        algorithm = request.get_json()
-        # data = {}
-        # data['algorithm'] = algorithm_json['algorithm']
-        # data['candidates'] = candidates_data
-        # if AlgorithmModel.find_by_name(algorithm_json['algorithm']):
-        #     return {"message": gettext("algorithm_name_exists").format(algorithm_json['algorithm']), 'status': 400}
-        #
-        # try:
-        #     AlgorithmModel.insert_algorithm(algorithm_json)
-        # except:
-        #     return {"message": gettext("algorithm_error_inserting"), 'status': 500}
-        #
-        # return {'message': gettext("algorithm_uploaded").format(algorithm_json['algorithm']), 'status': 400}
-        mongodb = AlgorithmModel()
-        mongodb.insert_algorithm(algorithm)
+        algorithm_json = request.get_json()
+
+        if AlgorithmModel.find_by_name(algorithm_json['algorithm']):
+            return {"message": gettext("algorithm_name_exists").format(algorithm_json['algorithm']), 'status': 400}
+
+        try:
+            mongodb = AlgorithmModel()
+            mongodb.insert_algorithm(algorithm_json)
+        except:
+            return {"message": gettext("algorithm_error_inserting"), 'status': 500}
+
+        return {'message': gettext("algorithm_uploaded").format(algorithm_json['algorithm']), 'status': 400}
+
     # @classmethod
     # def delete(cls, name):
     #     algorithm = AlgorithmModel.find_by_name(name)
