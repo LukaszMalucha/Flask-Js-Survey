@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    $('#DataTable').dataTable();
 // INSERT ALGORITHM
     $('#formAlgorithm').on('submit', function(event){
         $.ajax({

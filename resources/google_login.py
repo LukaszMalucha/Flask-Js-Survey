@@ -26,7 +26,7 @@ class GoogleAuthorize(Resource):
                 "error_description": request.args["error_description"]
             }
             session['message_warning'] = request.args["error_description"]
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('survey'))
 
         g.access_token = resp['access_token']  # put access token inside flask_global
         google_user = google.get('https://www.googleapis.com/oauth2/v2/userinfo')
@@ -40,4 +40,4 @@ class GoogleAuthorize(Resource):
 
         login_user(user)
         session['message_success'] = gettext("user_logged_in").format(google_email)
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('survey'))

@@ -14,7 +14,4 @@ $(document).ready(function() {
     $('.sidenav').sidenav();
 
     $('.tooltipped').tooltip();
-
-    $('#DataTable').dataTable();
-
 });

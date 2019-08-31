@@ -5,7 +5,7 @@
 {% block extrahead %}
 
 <link href="{{url_for('static', filename='css/forms.css')}}" rel="stylesheet"/>
-
+<script src="{{url_for('static', filename='js/user.js')}}"></script>
 {% endblock %}
 {% block content %}
 
@@ -21,8 +21,5 @@
     </div>
 </div>
 
-{% block head_js %}
-<script src="{{url_for('static', filename='js/user.js')}}"></script>
-{% endblock head_js %}
 
 {% endblock %}

@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
 {% block extrahead %}
+<!-- Algorithms Ajax Calls -->
+<script src="{{url_for('static', filename='js/algorithms.js')}}"></script>
 <!-- Data Tables -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<!-- Data Tables Js-->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 {% endblock %}
+<script>
+$(document).ready(function() {
+
+});
+</script>
 {% block content %}
 <div class="row row-cards">
     <div class="col-sm-12 col-md-4 col-lg-3">
@@ -72,10 +81,8 @@
 </div>
 
 {% block head_js %}
-<!-- Algorithms Ajax Calls -->
-<script src="{{url_for('static', filename='js/algorithms.js')}}"></script>
-<!-- Data Tables Js-->
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
 {% endblock head_js %}
 
 {% endblock %}

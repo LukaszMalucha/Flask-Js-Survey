@@ -6,11 +6,9 @@ class AlgorithmCollection:
     def __init__(self):
         self.mongo = mongo
 
-    @staticmethod
     def insert_algorithm(self, algorithm):
         return mongo.db.suggested_algorithms.insert(algorithm)
 
-    @staticmethod
     def delete_algorithm(self, name):
         mongo.db.suggested_algorithms.remove({'name': name})
 

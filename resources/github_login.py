@@ -27,7 +27,7 @@ class GithubAuthorize(Resource):
             }
 
             session['message_warning'] = request.args["error_description"]
-            return redirect(url_for('dashboard'))
+            return redirect(url_for('survey'))
 
         g.access_token = resp['access_token']  # put access token inside flask_global
         github_user = github.get('user')

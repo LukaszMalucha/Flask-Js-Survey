@@ -21,7 +21,7 @@ def load_user(user_id):
 def unauthorized():
     """Login missing"""
     session['message_warning'] = gettext("user_not_logged_in")
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('survey'))
 
 
 class Anonymous(AnonymousUserMixin):

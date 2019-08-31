@@ -50,9 +50,9 @@ api.add_resource(Confirm, '/confirm')
 api.add_resource(UserLogout, '/logout')
 api.add_resource(ConfirmationPage, '/user_confirmation/<string:confirmation_id>')
 api.add_resource(GithubLogin, '/login/github')
-api.add_resource(GithubAuthorize, '/login/github/authorized", endpoint="github.authorize')
+api.add_resource(GithubAuthorize, '/login/github/authorized', endpoint='github.authorize')
 api.add_resource(GoogleLogin, '/login/google')
-api.add_resource(GoogleAuthorize, '/login/google/authorized", endpoint="google.authorize')
+api.add_resource(GoogleAuthorize, '/login/google/authorized', endpoint='google.authorize')
 
 api.add_resource(Algorithms, '/algorithms')
 

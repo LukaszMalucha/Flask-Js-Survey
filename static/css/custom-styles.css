@@ -117,7 +117,6 @@ label {
     border-radius: 0px;
 }
 
-
 /*------------------------------------------------------------------------------
     ROWS
 ------------------------------------------------------------------------------*/
@@ -213,6 +212,7 @@ label {
 
 .btn-card:hover, .btn-card:active, .btn-card:focus {
     background-color: #121a23;
+    outline: none !important;
 }
 
 .btn-small {
@@ -224,6 +224,7 @@ label {
 .btn-small:hover, .btn-small:focus {
     background-color: #b20000;
     color: white;
+    outline: none !important;
 }
 
 table.dataTable tbody td {
