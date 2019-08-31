@@ -16,8 +16,8 @@ class Algorithms(Resource):
 
         algorithm_json = request.get_json()
 
-        if AlgorithmCollection.find_by_name(algorithm_json['algorithm']):
-            return {"message": gettext("algorithm_name_exists").format(algorithm_json['algorithm']), 'status': 400}
+        if AlgorithmCollection.find_by_name(algorithm_json['name']):
+            return {"message": gettext("algorithm_name_exists").format(algorithm_json['name']), 'status': 400}
 
         try:
             mongodb = AlgorithmCollection()
@@ -25,15 +25,16 @@ class Algorithms(Resource):
         except:
             return {"message": gettext("algorithm_error_inserting"), 'status': 500}
 
-        return {'message': gettext("algorithm_uploaded").format(algorithm_json['algorithm']), 'status': 200}
+        return {'message': gettext("algorithm_uploaded").format(algorithm_json['name']), 'status': 200}
 
 
-    # @classmethod
-    # def delete(cls, name):
-    #     algorithm = AlgorithmCollection.find_by_name(name)
-    #     try:
-    #         AlgorithmCollection.delete_algorithm(name)
-    #         return {"message": gettext("algorithm_deleted")}, 200
-    #     except:
-    #         return {"message": gettext("item_not_found")}, 404
+    @classmethod
+    def delete(cls):
+        algorithm_json = request.get_json()
+        algorithm = AlgorithmCollection.find_by_name(algorithm_json['algorithm'])
+        try:
+            AlgorithmCollection.delete_algorithm(algorithm_json['algorithm'])
+            return {"message": gettext("algorithm_deleted"), 'status': 200}
+        except:
+            return {"message": gettext("item_not_found"), 'status': 400}
 

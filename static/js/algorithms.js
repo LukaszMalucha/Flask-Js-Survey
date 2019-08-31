@@ -6,7 +6,7 @@ $(document).ready(function() {
             url : '/algorithms',
             contentType: 'application/json;charset=UTF-8',
             data: JSON.stringify({
-                algorithm: $('#algorithm').val(),
+                algorithm: $('#name').val(),
                 description: $('#description').val(),
             })
         })
