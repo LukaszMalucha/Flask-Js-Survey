@@ -13,7 +13,8 @@
   "algorithm_blank_error": "'{}' cannot be blank",
   "algorithm_name_exists": "An algorithm with name '{}' already exists",
   "algorithm_error_inserting": "An error occurred while inserting the algorithm",
-  "algorithm_not_found": "Algorithm not found",
+  "algorithm_error_deleting": "An error occurred while deleting the algorithm",
+  "algorithm_not_found": "Algorithm {} not found",
   "algorithm_deleted": "Algorithm deleted",
   "algorithm_uploaded": "Algorithm {} uploaded successfully",
 

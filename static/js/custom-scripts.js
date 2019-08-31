@@ -15,19 +15,6 @@ $(document).ready(function() {
 
     $('.tooltipped').tooltip();
 
-    $('.delete-button').on('click', function(){
-
-         var algorithm_id = $(this).attr('algorithm_id');
-
-         req = $.ajax({
-            url : '/delete',
-            type : 'DELETE',
-            data : {id : algorithm_id }
-         });
-
-         $('#algorithmRow'+algorithm_id).remove();
-
-
-    });
+    $('#DataTable').dataTable();
 
 });

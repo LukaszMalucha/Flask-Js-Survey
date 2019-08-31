@@ -6,11 +6,13 @@ class AlgorithmCollection:
     def __init__(self):
         self.mongo = mongo
 
+    @staticmethod
     def insert_algorithm(self, algorithm):
         return mongo.db.suggested_algorithms.insert(algorithm)
 
-    def delete_algorithm(self, _id):
-        mongo.db.suggested_algorithms.remove({'_id': _id})
+    @staticmethod
+    def delete_algorithm(self, name):
+        mongo.db.suggested_algorithms.remove({'name': name})
 
     @classmethod
     def find_all(cls):
@@ -18,4 +20,4 @@ class AlgorithmCollection:
 
     @classmethod
     def find_by_name(cls, name):
-        return mongo.db.suggested_algorithms.find_one({'algorithm': name})
+        return mongo.db.suggested_algorithms.find_one({'name': name})

@@ -4,6 +4,7 @@ from time import time
 
 CONFIRMATION_EXPIRATION_DELTA = 1800
 
+
 class ConfirmationModel(db.Model):
     __tablename__ = "confirmations"
 
@@ -26,7 +27,7 @@ class ConfirmationModel(db.Model):
 
     @property
     def expired(self) -> bool:
-        return time() > self.expire_at   # true or false - if time is greater then email is expired
+        return time() > self.expire_at  # true or false - if time is greater then email is expired
 
     def force_to_expire(self) -> None:
         if not self.expired:
@@ -40,11 +41,3 @@ class ConfirmationModel(db.Model):
     def delete_from_db(self) -> None:
         db.session.delete(self)
         db.session.commit()
-
-
-
-
-
-
-
-

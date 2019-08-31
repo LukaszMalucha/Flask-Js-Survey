@@ -1,19 +1,7 @@
 {% extends 'base.html' %}
 {% block extrahead %}
-
-<!-- Algorithms Ajax Calls -->
-<script src="{{url_for('static', filename='js/algorithms.js')}}"></script>
-
 <!-- Data Tables -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#DataTable').dataTable();
-    });
-
-
-</script>
 {% endblock %}
 {% block content %}
 <div class="row row-cards">
@@ -35,8 +23,7 @@
                         <input id="description" name="description" type="text" required>
                         <label for="description">Short Description</label>
                     </div>
-                    <div class="input-field col s12" style="height:25px">
-                    </div>
+                    <div class="input-field col s12"></div>
                 </div>
 
                 <button type="submit" class="btn-card" id="addButton"><span>Continue <i
@@ -50,7 +37,7 @@
             <div class="card-content">
                 <span class="card-title">Algortihms Repository</span>
                 <br>
-                <div class="table-responsive" style="overflow-x: hidden;">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered" id="DataTable">
                         <thead>
                         <tr>
@@ -61,11 +48,11 @@
                         </thead>
                         <tbody id="tableBody">
                         {% for algorithm in suggested_algorithms %}
-                        <tr class="odd gradeA" id="algorithmRow{{ algorithm._id }}">
-                            <td class="center" id="suggested_algorithm">{{algorithm.algorithm}}</td>
+                        <tr class="odd gradeA" id="algorithmRow_{{ algorithm.name }}">
+                            <td class="center" id="suggested_algorithm">{{algorithm.name}}</td>
                             <td class="center">{{algorithm.description}}</td>
                             <td class="center">
-                                <button class="btn btn-small delete-button" algorithm_id="{{ algorithm._id }}">Delete
+                                <button class="btn btn-small delete-button" algorithm_name="{{ algorithm.name }}">Delete
                                 </button>
                             </td>
                         </tr>
@@ -83,4 +70,12 @@
         <i class="large material-icons">exit_to_app</i>
     </a>
 </div>
+
+{% block head_js %}
+<!-- Algorithms Ajax Calls -->
+<script src="{{url_for('static', filename='js/algorithms.js')}}"></script>
+<!-- Data Tables Js-->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+{% endblock head_js %}
+
 {% endblock %}

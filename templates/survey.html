@@ -26,7 +26,17 @@
 
     var answers =  {{ answers|tojson }};
 </script>
+
 <script src="{{url_for('static', filename='js/questions.js')}}"></script>
+
+<!-- Survey Js -->
+<script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
+
+<!-- Velocity Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
+
+
 {% endblock head_js %}
 
 

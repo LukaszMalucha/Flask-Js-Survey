@@ -1,5 +1,3 @@
-from time import time
-
 from flask import render_template, request, url_for, Response, session
 from flask_restful import Resource
 from flask_login import login_user

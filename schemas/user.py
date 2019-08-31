@@ -1,5 +1,5 @@
 from ma import ma
-from marshmallow import pre_dump, fields, INCLUDE
+from marshmallow import pre_dump
 from models.user import UserModel
 
 
