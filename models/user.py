@@ -1,5 +1,5 @@
 import os
-import env
+# import env
 from models.confirmation import ConfirmationModel
 from flask_login import UserMixin
 from db import db
