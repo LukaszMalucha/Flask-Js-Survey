@@ -5,6 +5,7 @@ Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.4.1
 flask_marshmallow==0.10.1
+flask_oauthlib==0.9.5
 Flask-PyMongo==2.2.0
 Flask-RESTful==0.3.7
 Flask-SQLAlchemy==2.3.2
