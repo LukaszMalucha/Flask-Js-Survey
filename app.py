@@ -2,7 +2,7 @@ import os
 
 from marshmallow import ValidationError
 
-import env
+# import env
 
 from flask import Flask, render_template, jsonify
 from flask_bootstrap import Bootstrap
@@ -27,7 +27,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI'
 app.config['JWT_SECRET_KEY'] = os.environ["JWT_SECRET_KEY"]
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 # For Suggested Questions:
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
@@ -88,8 +88,8 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    app.run()
+    # app.run()
 
 # Heroku
-#     port = int(os.environ.get('PORT', 5000))
-#     app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
