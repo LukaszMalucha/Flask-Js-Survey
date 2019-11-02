@@ -12,6 +12,7 @@ Flask-Testing==0.7.1
 Flask-WTF==0.14.2
 Jinja2==2.10
 marshmallow==3.2.1
+marshmallow-sqlalchemy==0.17.0
 mockupdb==1.7.0
 parse==1.9.0
 parse-type==0.4.2
